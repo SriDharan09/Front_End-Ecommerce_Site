@@ -14,3 +14,54 @@
   --primary1: #2b3d4c;
   --primary2: #354d61;
 }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+}
+.logo {
+  width: 10rem;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  font-size: 0.9 rem;
+}
+p {
+  font-size: 0.9 rem;
+  margin: auto;
+}
+
+button {
+  padding: 12px 10px;
+  font-size: 0.9rem;
+  background: var(--primary1);
+  color: white;
+}
+
+/* Header Style Starts */
+.input-group button {
+  background: transparent;
+  font-size: 0.9rem;
+  color: var(--search);
+}
+.nav-links a {
+  font-size: 16px;
+  color: var(--primary1);
+}
+
+.header-upper {
+  background-color: var(--lighter2);
+}
+
+.nav-links-nav a {
+  color: var(--search);
+}
+
+/* Header Style Ends */
