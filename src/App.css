@@ -46,6 +46,10 @@ button {
 }
 
 /* Header Style Starts */
+.header-top-strip a {
+  color: var(--primary1);
+}
+
 .input-group button {
   background: transparent;
   font-size: 0.9rem;
@@ -63,5 +67,23 @@ button {
 .nav-links-nav a {
   color: var(--search);
 }
+.social-links a {
+  color: var(--search);
+}
 
 /* Header Style Ends */
+
+/* Footer  Style Starts */
+footer {
+  background-color: var(--lighter2);
+}
+
+.pay img {
+  transition: 0.3s ease-in;
+}
+
+.pay img:hover {
+  transform: translateY(-10px);
+}
+
+/* Footer  Style Ends */
