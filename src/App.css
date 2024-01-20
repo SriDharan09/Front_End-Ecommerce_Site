@@ -37,6 +37,21 @@ p {
   font-size: 0.9 rem;
   margin: auto;
 }
+span {
+  border-radius: 15px;
+}
+h1 {
+  font-weight: 500;
+  color: var(--search);
+  margin: 10px;
+  font-size: 40px;
+}
+h2 {
+  font-weight: 500;
+  color: var(--primary1);
+  margin: 10px;
+  font-size: 32px;
+}
 
 button {
   padding: 12px 10px;
@@ -45,9 +60,39 @@ button {
   color: white;
 }
 
+.button-link {
+  padding: 12px 10px;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  background: var(--primary);
+  color: white;
+  transition: 0.2s ease-in-out;
+  margin-top: 5px;
+}
+
+.button-link:hover {
+  background: transparent;
+  color: var(--search);
+  transform: translateY(5px);
+  border: 1.5px solid var(--primary);
+}
+
 /* Header Style Starts */
 .header-top-strip a {
   color: var(--primary1);
+}
+
+.header-top-strip a:hover {
+  color: var(--primary);
+}
+.active {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.inactive {
+  color: var(--primary1);
+  font-weight: 400;
 }
 
 .input-group button {
@@ -57,16 +102,16 @@ button {
 }
 .nav-links a {
   font-size: 16px;
-  color: var(--primary1);
+  text-decoration: none;
 }
 
 .header-upper {
   background-color: var(--lighter2);
 }
 
-.nav-links-nav a {
+/* .nav-links-nav a {
   color: var(--search);
-}
+} */
 .social-links a {
   color: var(--search);
 }
@@ -87,3 +132,104 @@ footer {
 }
 
 /* Footer  Style Ends */
+
+/* Home Page Starts */
+.banner-details {
+  background: url(./assets/images/back.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 70vh;
+}
+
+.banner-heading {
+  text-shadow: 30px 15px 7px rgba(0, 0, 0, 0.2);
+  font-size: 50px;
+}
+
+.banner-para {
+  text-shadow: 30px 15px 7px rgba(0, 0, 0, 0.2);
+  font-size: 35px;
+}
+
+.hero-details img {
+  width: 100%;
+  height: 70px;
+}
+.hero-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 0px;
+}
+
+.feature-heading {
+  color: var(--search);
+  font-weight: 700;
+  font-size: 40px;
+}
+.feature-para {
+  font-size: 13px;
+}
+/* Home Page Ends */
+
+/* Featured Products starts */
+.featured-products .card-text {
+  color: var(--darken);
+  font-size: 14px;
+  text-transform: lowercase;
+}
+
+.featured-products .card img {
+  border-radius: 25px;
+  max-width: 100%;
+  max-height: 280px;
+}
+.featured-products p {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+  color: var(--primary);
+}
+.feature-price {
+  font-size: 20px;
+  margin-right: 5px;
+}
+.featured-products .product-status {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+.featured-products .rate {
+  font-size: 18px;
+}
+
+.ad-details {
+  background: url(./assets/images/banner/b2.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 30vh;
+  background-position: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+.ad-details button {
+  color: #fff;
+  background-color: var(--darker);
+  border: 1px solid transparent;
+  transition: 0.5s ease;
+  padding: 10px;
+  width: 100px;
+  border-radius: 50px;
+}
+.ad-details .btn:hover {
+  background-color: transparent;
+  border: 1px solid var(--primary);
+  color: var(--darker);
+  transform: translateY(-5px);
+}
+
+/* Featured Products Ends */
