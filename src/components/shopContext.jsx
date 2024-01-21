@@ -68,7 +68,7 @@ const shopcontext = (props) => {
   };
 
   const resetCart = () => {
-    setCartItems([]);
+    setCartItems(getDefaultCart());
   };
 
   const [selectedProduct, setSelectedProduct] = useState(null);

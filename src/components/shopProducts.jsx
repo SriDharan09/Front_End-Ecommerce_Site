@@ -13,7 +13,14 @@ const shopProducts = (props) => {
     <>
       <div className="col-3" key={id}>
         <div className="card p-3 my-3">
-          <img src={image} alt="" className="card-img-top img-fluid" />
+          <Link to={"/viewProduct"} onClick={() => viewProductDetails(id)}>
+            <img
+              src={image}
+              alt=""
+              className="card-img-top img-fluid"
+              title="View Details"
+            />
+          </Link>
           <div className="card-details p-3">
             <div className="d-flex justify-content-between card-text">
               <span className="shadow p-2">{brand}</span>
@@ -40,6 +47,7 @@ const shopProducts = (props) => {
             <div className="d-flex flex-column align-items-center justify-content-around mb-2">
               <div className="div view-banner">
                 <Link
+                  to={"/viewProduct"}
                   className="view-btn"
                   onClick={() => viewProductDetails(id)}
                 >

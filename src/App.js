@@ -9,6 +9,7 @@ import Contact from "./pages/contact";
 import Cart from "./pages/cart";
 import Login from "./pages/login";
 import Wishlist from "./pages/wishlist";
+import ViewProduct from "./pages/viewProduct";
 import ShopContext from "./components/shopContext";
 
 function App() {
@@ -26,6 +27,8 @@ function App() {
               <Route path="/cart" element={<Cart />} />
               <Route path="/login" element={<Login />} />
               <Route path="/wishlist" element={<Wishlist />} />
+              <Route path="*" element={<Home />} />
+              <Route path="/viewProduct" element={<ViewProduct />} />
             </Route>
           </Routes>
         </BrowserRouter>

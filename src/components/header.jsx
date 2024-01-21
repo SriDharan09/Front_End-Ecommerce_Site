@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { PiPhoneCallFill } from "react-icons/pi";
 import { Link, useLocation } from "react-router-dom";
 import { MdOutgoingMail } from "react-icons/md";
@@ -6,8 +6,11 @@ import logo from "../assets/images/logo-preview.png";
 import { BsBookmarkHeart } from "react-icons/bs";
 import { RiAccountPinCircleLine } from "react-icons/ri";
 import { RiShoppingCartLine } from "react-icons/ri";
+import { ShopContext } from "../components/shopContext";
 
 const Header = () => {
+  const { getTotalCartProducts } = useContext(ShopContext);
+  const totalCartProducts = getTotalCartProducts();
   const location = useLocation();
   return (
     <>
@@ -137,7 +140,10 @@ const Header = () => {
                   <span>
                     <RiShoppingCartLine className="fs-4 mx-2" />
                   </span>
-                  <p>Cart</p>
+                  <p>
+                    Cart
+                    {totalCartProducts > 0 && `(${totalCartProducts})`}
+                  </p>
                 </div>
               </Link>
             </div>
