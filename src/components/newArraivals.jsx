@@ -1,12 +1,11 @@
 import React from "react";
-import { PRODUCTS } from "./products";
-import { IoIosTimer } from "react-icons/io";
+import { PRODUCTS1 } from "./products";
 
-const featuredProducts = () => {
+const newArraivals = () => {
   return (
     <>
       <div className="row mt-4">
-        {PRODUCTS.slice(4, 8).map((product) => (
+        {PRODUCTS1.slice(2, 6).map((product) => (
           <div className="col-3 p-2">
             <div key={product.id}>
               <div className="card">
@@ -23,14 +22,11 @@ const featuredProducts = () => {
                     <h5 className="mt-3 mb-3">{product.name}</h5>
                   </div>
                   <div className="card-footer  text-center">
-                    <p className="product-status mt-3">
-                      {product.status} <IoIosTimer className="fs-5" />
-                    </p>
+                    <p className="product-status mt-3">{product.status}</p>
                     <hr />
-                    <strike className="text-danger feature-price ">
+                    <h4 className="text-danger arrival-price ">
                       ₹ {product.price}
-                    </strike>
-                    <sup className="text-success rate">{product.rate}</sup>
+                    </h4>
                   </div>
                 </div>
               </div>
@@ -42,4 +38,4 @@ const featuredProducts = () => {
   );
 };
 
-export default featuredProducts;
+export default newArraivals;

@@ -9,8 +9,37 @@ import { FaInstagram, FaLinkedin, FaFacebook, FaGithub } from "react-icons/fa";
 const Footer = () => {
   return (
     <>
-      <footer className="footer p-4">
-        <div className="container-xxl">
+      <section className="container-xxl">
+        <div className="row">
+          <div className="col-12 d-flex justify-content-between p-5 news-letter ">
+            <div className="col-4 text-center">
+              <h2 className="text-black">Sign up for News Letter</h2>
+              <p className="text-black">
+                Get email updates on all our{" "}
+                <span className="text-success h5">special offers</span>
+              </p>
+            </div>
+            <div className="col-8 ">
+              <div className="input-group mb-2 p-4">
+                <input
+                  type="text"
+                  className="form-control p-2"
+                  placeholder="Mail Id : Eg(xXrQK@example.com)"
+                  aria-label="Mail Id : xXrQK@example.com"
+                  aria-describedby="basic-addon2"
+                />
+                <Link className="input-group-text" id="basic-addon2">
+                  Sign Up
+                </Link>
+              </div>
+            </div>
+          </div>
+          <hr className="m-4" />
+        </div>
+      </section>
+
+      <footer className="footer p-4 ">
+        <div className="container-xxl ">
           <div className="row">
             {/*Contact Us */}
             <div className="col-4 d-flex flex-column ">

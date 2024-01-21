@@ -34,7 +34,7 @@ const Header = () => {
         </div>
       </header>
 
-      <header className="header-upper px-3 ">
+      <header className="header-upper px-3 sticky-top">
         <div className="container-xxl" style={{ marginLeft: 0 }}>
           <div className="row">
             <div className="col-2 m-auto text-center">
