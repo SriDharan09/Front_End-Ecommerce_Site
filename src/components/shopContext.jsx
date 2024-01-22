@@ -80,6 +80,9 @@ const shopcontext = (props) => {
   const closeProductDetails = () => {
     setSelectedProduct(null);
   };
+  // const ratingStar = () => {
+  //   Math.floor(Math.random() * 5) + 2;
+  // };
 
   const contextValue = {
     cartItems,

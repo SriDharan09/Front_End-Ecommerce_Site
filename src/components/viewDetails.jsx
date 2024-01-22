@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { ShopContext } from "../components/shopContext";
 import { PRODUCTS, PRODUCTS1 } from "../components/products";
 import ReactStarts from "react-rating-stars-component";
+import { Link } from "react-router-dom";
 
 const ViewDetails = () => {
   const {
@@ -20,7 +21,7 @@ const ViewDetails = () => {
 
   const randomPrice = Math.floor(Math.random() * 70) + 750;
   const [selectedSize, setSelectedSize] = useState(null);
-  const random = Math.floor(Math.random() * 5) + 2;
+  const random = Math.floor(Math.random() * 5) + 3;
   const cartItemCount = cartItems[productId];
 
   const handleSizeClick = (size) => {
@@ -37,6 +38,9 @@ const ViewDetails = () => {
             Add to Cart
             {cartItemCount > 0 && `(${cartItemCount})`}
           </button>
+          <Link to={"/shop"} className="shoping text-center  mt-4 mx-5">
+            Continue Shopping
+          </Link>
         </div>
         <div className="col-6 card mx-5">
           <div className="p-5">

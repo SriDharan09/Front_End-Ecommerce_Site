@@ -7,9 +7,9 @@ const featuredProducts = () => {
     <>
       <div className="row mt-4">
         {PRODUCTS.slice(4, 8).map((product) => (
-          <div className="col-3 p-2">
-            <div key={product.id}>
-              <div className="card">
+          <div key={product.id} className="col-3 p-2">
+            <div>
+              <div key={product.id} className="card">
                 <img
                   src={product.image}
                   alt=""

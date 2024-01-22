@@ -5,7 +5,7 @@ import ReactStarts from "react-rating-stars-component";
 
 const shopProducts = (props) => {
   const { id, name, image, price, brand } = props.data;
-  const random = Math.floor(Math.random() * 5) + 2;
+  const random = Math.floor(Math.random() * 5) + 3;
   const { viewProductDetails, addToCart, cartItems } = useContext(ShopContext);
   const cartItemCount = cartItems[id];
 

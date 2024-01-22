@@ -6,9 +6,9 @@ const newArraivals = () => {
     <>
       <div className="row mt-4">
         {PRODUCTS1.slice(2, 6).map((product) => (
-          <div className="col-3 p-2">
-            <div key={product.id}>
-              <div className="card">
+          <div key={product.id} className="col-3 p-2">
+            <div>
+              <div key={product.id} className="card">
                 <img
                   src={product.image}
                   alt=""
