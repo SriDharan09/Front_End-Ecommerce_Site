@@ -80,4 +80,4 @@ const ShopProducts = (props) => {
   );
 };
 
-export default shopProducts;
+export default ShopProducts;
