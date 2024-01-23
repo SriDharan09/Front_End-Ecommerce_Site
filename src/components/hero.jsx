@@ -3,7 +3,7 @@ import icon1 from "../assets/images/icons/icon1.png";
 import icon2 from "../assets/images/icons/icon2.png";
 import icon3 from "../assets/images/icons/icon3.png";
 import icon4 from "../assets/images/icons/icon4.png";
-import icon5 from "../assets/images/icons/icon5.png";
+// import icon5 from "../assets/images/icons/icon5.png";
 import icon6 from "../assets/images/icons/icon6.png";
 
 const hero = () => {
@@ -14,7 +14,7 @@ const hero = () => {
         <div className="container-xxl">
           <div className="row">
             {/* Hero Details */}
-            
+
             <div className="hero-details d-flex text-center  ">
               <div className="card p-2 mx-3 px-3">
                 <img src={icon1} alt="" className="img-fluid feature-img " />

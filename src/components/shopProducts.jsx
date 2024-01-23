@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import { ShopContext } from "./shopContext";
 import { Link } from "react-router-dom";
 import ReactStarts from "react-rating-stars-component";

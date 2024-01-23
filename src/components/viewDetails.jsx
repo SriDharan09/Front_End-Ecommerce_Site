@@ -139,21 +139,21 @@ const ViewDetails = () => {
                   <li>
                     Bank Offer10% off on Bank of Baroda Credit Card and EMI
                     Transactions, up to ₹1500 on orders of ₹5000 and above{" "}
-                    <a href="#">T&C</a>
+                    <button href="#">T&C</button>
                   </li>
                   <li>
                     Bank Offer10% off on Canara Bank Credit Card Transactions,
                     up to ₹1,500 on orders of ₹5,000 and above{" "}
-                    <a href="#">T&C</a>
+                    <button href="#">T&C</button>
                   </li>
                   <li>
                     Bank Offer10% off on Citi-branded Credit Card EMI
                     Transactions, up to ₹2,000 on orders of ₹10,000 and above{" "}
-                    <a href="#">T&C</a>
+                    <button href="#">T&C</button>
                   </li>
                   <li>
                     Special PriceGet extra 20% off (price inclusive of
-                    cashback/coupon) <a href="#">T&C</a>
+                    cashback/coupon) <button href="#">T&C</button>
                   </li>
                 </ul>
               </div>

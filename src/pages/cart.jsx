@@ -48,6 +48,8 @@ const Cart = () => {
                   {[...PRODUCTS, ...PRODUCTS1].map((product) => {
                     if (cartItems[product.id] !== 0) {
                       return <Cartitems key={product.id} data={product} />;
+                    } else {
+                      return null;
                     }
                   })}
                 </div>

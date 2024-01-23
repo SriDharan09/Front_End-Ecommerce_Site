@@ -4,7 +4,7 @@ import { CiMail } from "react-icons/ci";
 import { BiPhoneCall } from "react-icons/bi";
 
 import { VscAccount } from "react-icons/vsc";
-import { CgShoppingCart, CgProductHunt } from "react-icons/cg";
+import { CgShoppingCart } from "react-icons/cg";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { NavLink, useLocation } from "react-router-dom";

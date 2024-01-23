@@ -22,11 +22,15 @@ const CartItems = (props) => {
   const product =
     PRODUCTS.find((item) => item.id === productId) ||
     PRODUCTS1.find((item) => item.id === productId);
+  {
+    product;
+  }
   return (
     <>
       {/* Cart Items Component */}
       <div className="cart-items p-3">
         <hr />
+
         <div className="container-xxl">
           <div key={id} className="row">
             {/* Cart Items (4 sections)*/}
