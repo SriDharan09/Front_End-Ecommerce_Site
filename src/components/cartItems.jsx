@@ -19,12 +19,10 @@ const CartItems = (props) => {
   // Filtering the Selected product when we click the add to cart button
 
   const productId = selectedProduct || 0;
-  const product =
+  const _product =
     PRODUCTS.find((item) => item.id === productId) ||
     PRODUCTS1.find((item) => item.id === productId);
-  {
-    product;
-  }
+
   return (
     <>
       {/* Cart Items Component */}
