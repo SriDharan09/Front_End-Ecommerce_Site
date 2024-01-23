@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import pay from "../assets/images/pay/pay.png";
 import { ShopContext } from "../components/shopContext";
 
-const checkout = () => {
+const Checkout = () => {
   const { getTotalCartProducts, getTotalCartAmount, resetCart } =
     useContext(ShopContext);
   const totalAmount = getTotalCartAmount();
@@ -222,4 +222,4 @@ const checkout = () => {
   );
 };
 
-export default checkout;
+export default Checkout;

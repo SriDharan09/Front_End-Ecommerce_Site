@@ -4,8 +4,8 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { PRODUCTS, PRODUCTS1 } from "../components/products";
 
-const cartItems = (props) => {
-  // Import Data 
+const CartItems = (props) => {
+  // Import Data
   const { id, name, image, price, brand } = props.data;
   const {
     viewProductDetails,
@@ -112,4 +112,4 @@ const cartItems = (props) => {
   );
 };
 
-export default cartItems;
+export default CartItems;

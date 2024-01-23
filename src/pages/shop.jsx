@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import ShopItems from "../components/shopItems";
 
-const shop = () => {
+const Shop = () => {
   const [currentPage, setCurrentPage] = useState(1);
 
   // update pagination and track the current page
@@ -137,4 +137,4 @@ const shop = () => {
   );
 };
 
-export default shop;
+export default Shop;

@@ -3,7 +3,7 @@ import { PRODUCTS, PRODUCTS1 } from "../components/products";
 import Cartitems from "../components/cartItems";
 import { ShopContext } from "../components/shopContext";
 import { Link } from "react-router-dom";
-const cart = () => {
+const Cart = () => {
   const {
     getTotalCartAmount,
     getTotalCartProducts,
@@ -102,4 +102,4 @@ const cart = () => {
   );
 };
 
-export default cart;
+export default Cart;
