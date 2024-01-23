@@ -1,6 +1,10 @@
 import React, { createContext, useState } from "react";
 import { PRODUCTS, PRODUCTS1 } from "../components/products";
 
+// All Functionality of adding , removing , incrementing , ....
+// decrementing product from cart , view product details, update cart item count, ...
+//  get total cart amount, get total cart products, get default cart
+
 // context
 export const ShopContext = createContext(null);
 // function

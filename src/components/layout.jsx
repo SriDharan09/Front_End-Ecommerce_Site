@@ -7,6 +7,7 @@ import { Outlet } from "react-router-dom";
 const Layout = () => {
   return (
     <>
+      {/* Layout component for header and footer */}
       <Header />
       <Outlet />
       <Footer />

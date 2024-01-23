@@ -6,6 +6,7 @@ import img3 from "../assets/images/blog/b4.jpg";
 const blog = () => {
   return (
     <>
+      {/* Blog banner */}
       <section className="blog-wrapper">
         <div className="container-xxl">
           <div className="row">
@@ -19,16 +20,15 @@ const blog = () => {
         </div>
       </section>
 
+      {/* Blog Details */}
+
       <section className="blog-details p-5">
         <div className="container-xxl">
           <div className="row">
-            <div className="text-center my-4">
-              <h1 className="fs-2 mb-3">Exlpore More on Our Library</h1>
-              <p>Let us know what you think</p>
-            </div>
-            <div className=" card mb-4 mt-3 blog-details-page">
-              <div className="p-4 d-flex">
-                <div className="col-3">
+            {/* First Blog Card */}
+            <div className="card mb-4 mt-3 blog-details-page">
+              <div className="p-4 d-flex flex-column flex-sm-row">
+                <div className="col-12 col-sm-3 mb-3 mb-sm-0 text-center">
                   <img
                     src={img1}
                     alt=""
@@ -36,7 +36,7 @@ const blog = () => {
                   />
                 </div>
 
-                <div className="card-body col-9 p-4">
+                <div className="card-body col-12 col-sm-9 p-4">
                   <h3 className="card-title">
                     <b>Marry kelvin</b>
                   </h3>
@@ -48,9 +48,11 @@ const blog = () => {
                     eligendi temporibus. Voluptate nulla dolorum nesciunt dicta
                     quasi!
                   </p>
-                  <button className="button-deal btn mt-3">Read More</button>
+                  <button className="button-deal  blog-btn btn mt-3">
+                    Read More
+                  </button>
                   <div className="card-footer mt-4">
-                    <p className="text-end ">
+                    <p className="text-muted text-center blog-p">
                       Last updated :
                       <span>{new Date().toLocaleDateString()}</span>
                     </p>
@@ -59,9 +61,10 @@ const blog = () => {
               </div>
             </div>
 
-            <div className=" card mb-4  blog-details-page">
-              <div className="p-4 d-flex">
-                <div className="col-3">
+            {/* Second Blog Card */}
+            <div className="card mb-4 mt-3 blog-details-page">
+              <div className="p-4 d-flex flex-column flex-sm-row">
+                <div className="col-12 col-sm-3 mb-3 mb-sm-0 text-center">
                   <img
                     src={img2}
                     alt=""
@@ -69,7 +72,7 @@ const blog = () => {
                   />
                 </div>
 
-                <div className="card-body col-9 p-4">
+                <div className="card-body col-12 col-sm-9 p-4">
                   <h3 className="card-title">
                     <b>Marry kelvin</b>
                   </h3>
@@ -81,20 +84,23 @@ const blog = () => {
                     eligendi temporibus. Voluptate nulla dolorum nesciunt dicta
                     quasi!
                   </p>
-                  <button className="button-deal btn mt-3">Read More</button>
+                  <button className="button-deal  blog-btn btn mt-3">
+                    Read More
+                  </button>
                   <div className="card-footer mt-4">
-                    <p className="text-end ">
+                    <p className="text-muted text-center blog-p">
                       Last updated :
-                      <span>{new Date("2023-12-25").toLocaleDateString()}</span>
+                      <span>{new Date().toLocaleDateString()}</span>
                     </p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className=" card mb-4  blog-details-page">
-              <div className="p-4 d-flex">
-                <div className="col-3">
+            {/* Third Blog Card */}
+            <div className="card mb-4 mt-3 blog-details-page">
+              <div className="p-4 d-flex flex-column flex-sm-row">
+                <div className="col-12 col-sm-3 mb-3 mb-sm-0 text-center">
                   <img
                     src={img3}
                     alt=""
@@ -102,7 +108,7 @@ const blog = () => {
                   />
                 </div>
 
-                <div className="card-body col-9 p-4">
+                <div className="card-body col-12 col-sm-9 p-4">
                   <h3 className="card-title">
                     <b>Marry kelvin</b>
                   </h3>
@@ -114,11 +120,13 @@ const blog = () => {
                     eligendi temporibus. Voluptate nulla dolorum nesciunt dicta
                     quasi!
                   </p>
-                  <button className="button-deal btn mt-3">Read More</button>
+                  <button className="button-deal  blog-btn btn mt-3">
+                    Read More
+                  </button>
                   <div className="card-footer mt-4">
-                    <p className="text-end ">
+                    <p className=" text-muted text-center blog-p ">
                       Last updated :
-                      <span>{new Date("2023-11-25").toLocaleDateString()}</span>
+                      <span>{new Date().toLocaleDateString()}</span>
                     </p>
                   </div>
                 </div>

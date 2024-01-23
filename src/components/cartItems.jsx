@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { PRODUCTS, PRODUCTS1 } from "../components/products";
 
 const cartItems = (props) => {
+  // Import Data 
   const { id, name, image, price, brand } = props.data;
   const {
     viewProductDetails,
@@ -14,42 +15,54 @@ const cartItems = (props) => {
     selectedProduct,
     updateCartItemCount,
   } = useContext(ShopContext);
+
+  // Filtering the Selected product when we click the add to cart button
+
   const productId = selectedProduct || 0;
   const product =
     PRODUCTS.find((item) => item.id === productId) ||
     PRODUCTS1.find((item) => item.id === productId);
   return (
     <>
+      {/* Cart Items Component */}
       <div className="cart-items p-3">
         <hr />
         <div className="container-xxl">
           <div key={id} className="row">
+            {/* Cart Items (4 sections)*/}
             <table>
               <tbody>
                 <tr>
-                  <td className="col-2">
+                  {/* Mapping cart img */}
+
+                  <td className="col-md-2 col-3 cart-img">
                     <Link
                       to={`/viewProduct`}
                       onClick={() => viewProductDetails(id)}
                     >
-                      <img src={image} alt="" className="img-fluid" />
+                      <img src={image} alt="" className="img-fluid cart-img1" />
                     </Link>
                   </td>
-                  <td className="col-5">
+
+                  {/* Mapping cart details */}
+
+                  <td className="col-md-5 col-6 cart-product">
                     <p className="card-details">
-                      <span>Product Brand : </span>
-                      <span className="clr">{brand}</span>
+                      <span className="cart-text">Product Brand : </span>
+                      <span className="clr cart-text">{brand}</span>
                     </p>
                     <p className="card-details">
-                      <span>Product Name : </span>
-                      <span className="clr">{name}</span>
+                      <span className="cart-text">Product Name : </span>
+                      <span className="clr cart-text">{name}</span>
                     </p>
                     <p className="card-details">
-                      <span>Product Price : </span> ₹
-                      <span className="clr">{price}</span>
+                      <span className="cart-text">Product Price : </span> ₹
+                      <span className="clr cart-text">{price}</span>
                     </p>
                   </td>
-                  <td className="col-3">
+
+                  {/* Mapping cart quantity how many items selected */}
+                  <td className="col-md-3 col-3 cart-quantity">
                     <p className="quantity">Quantity</p>
                     <button
                       className="add-btn btnn"
@@ -74,7 +87,8 @@ const cartItems = (props) => {
                       -
                     </button>
                   </td>
-                  <td className="col-3">
+                  {/* Coupon code */}
+                  <td className="col-md-3 col-3 cart-coupon">
                     <div className="input-group mb-3">
                       <input
                         type="text"

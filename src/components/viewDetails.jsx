@@ -10,7 +10,7 @@ const ViewDetails = () => {
     removeToCart,
     addToCart,
     cartItems,
-    closeProductDetails,
+    viewProductDetails,
     selectedProduct,
   } = useContext(ShopContext);
 
@@ -30,22 +30,32 @@ const ViewDetails = () => {
 
   return (
     <>
-      <div className="d-flex p-5 ">
-        <div className="col-6 card ">
+      {/* Viewing single product */}
+      <div className="d-flex p-5  view-container ">
+        {/* Single Image  selected with id as productId */}
+        <div className="col-12 col-md-6 card view-img ">
           <img src={product.image} alt="" className="img-fluid p-5" />
 
-          <button className="add-btn mx-5" onClick={() => addToCart(productId)}>
+          <button
+            className="add-btn view-add mx-5"
+            onClick={() => addToCart(productId)}
+          >
             Add to Cart
             {cartItemCount > 0 && `(${cartItemCount})`}
           </button>
-          <Link to={"/shop"} className="shoping text-center  mt-4 mx-5">
+          <Link
+            to={"/shop"}
+            className="shoping text-center view-shop  mt-4 mx-5"
+          >
             Continue Shopping
           </Link>
         </div>
-        <div className="col-6 card mx-5">
-          <div className="p-5">
-            <span className="shadow-lg p-2 mb-3 brand">{product.brand}</span>
-            <h3 className="my-3">{product.name}</h3>
+
+        {/* product Details */}
+        <div className="col-12 col-md-6 card mx-5">
+          <div className="p-5 vieww">
+            <span className="shadow-lg  p-2 mb-3 brand">{product.brand}</span>
+            <h3 className="my-3 view-name">{product.name}</h3>
             <div className="card-details">
               <ReactStarts
                 count={5}
@@ -61,33 +71,37 @@ const ViewDetails = () => {
                 </strike>
               </p>
 
-              <div className="text-center">
+              {/* quantity */}
+              <div className="text-center ">
                 <p>Quantity</p>
-                <button
-                  className="add-btn btnn mx-3 p-2"
-                  onClick={() => addToCart(product.id)}
-                >
-                  +
-                </button>
+                <div className="view-quantity">
+                  <button
+                    className="add-btn btnn mx-3 p-2"
+                    onClick={() => addToCart(product.id)}
+                  >
+                    +
+                  </button>
 
-                <input
-                  className="qnty-show p-2"
-                  readOnly
-                  type="text"
-                  value={cartItems[product.id]}
-                  onChange={(e) =>
-                    updateCartItemCount(Number(e.target.value), product.id)
-                  }
-                />
+                  <input
+                    className="qnty-show p-2"
+                    readOnly
+                    type="text"
+                    value={cartItems[product.id]}
+                    onChange={(e) =>
+                      updateCartItemCount(Number(e.target.value), product.id)
+                    }
+                  />
 
-                <button
-                  className="less-btn btnn  mx-3 p-2"
-                  onClick={() => removeToCart(product.id)}
-                >
-                  -
-                </button>
+                  <button
+                    className="less-btn btnn  mx-3 p-2"
+                    onClick={() => removeToCart(product.id)}
+                  >
+                    -
+                  </button>
+                </div>
               </div>
 
+              {/* size section */}
               <div className="size p-4 ">
                 <p>Size</p>
                 <div className="d-flex justify-content-between align-items-center shadow-lg p-2 my-3 mx-3">
@@ -104,7 +118,7 @@ const ViewDetails = () => {
                   ))}
                 </div>
               </div>
-
+              {/* coupon section */}
               <div className="input-group mb-3">
                 <input
                   type="text"
@@ -117,6 +131,8 @@ const ViewDetails = () => {
                   Add
                 </button>
               </div>
+
+              {/* offers available */}
               <div>
                 <p className="h6 text-info">Available offers</p>
                 <ul className="list-group text-secondary mb-4">
@@ -141,20 +157,28 @@ const ViewDetails = () => {
                   </li>
                 </ul>
               </div>
+
+              {/* More products */}
               <div className="card-footer">
                 <div className="price my-3 text-center h4 text-success">
                   More Prodcuts like this..
-                  <div className="row mt-4">
+                  <div className="row mt-4 view-more">
                     {PRODUCTS.slice(4, 16).map((product) => (
-                      <div className="col-3 p-2">
+                      <div className="col-md-3 col-6 p-2">
                         <div key={product.id}>
-                          <div className="card">
-                            <img
-                              src={product.image}
-                              alt=""
-                              className=" card-img-top img-fluid  m-auto p-3 img"
-                            />
-                          </div>
+                          <Link
+                            to={`/viewProduct`}
+                            // onclick it update the view product and it takes to the view product page with id
+                            onClick={() => viewProductDetails(product.id)}
+                          >
+                            <div className="card">
+                              <img
+                                src={product.image}
+                                alt=""
+                                className=" card-img-top img-fluid  m-auto p-3 img"
+                              />
+                            </div>
+                          </Link>
                         </div>
                       </div>
                     ))}

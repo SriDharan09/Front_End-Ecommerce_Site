@@ -5,7 +5,8 @@ import { PRODUCTS, PRODUCTS1 } from "./products";
 const shopItems = () => {
   return (
     <>
-      <div className="row">
+      {/* Orgin Shop page Prop drilling to shopProducts */}
+      <div className="row shop-product mx-5">
         {[...PRODUCTS, ...PRODUCTS1].map((product) => (
           <ShopProducts key={product.id} data={product} />
         ))}

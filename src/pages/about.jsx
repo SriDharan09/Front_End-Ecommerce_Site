@@ -5,16 +5,10 @@ import { Link } from "react-router-dom";
 import Hero from "../components/hero";
 import Marquee from "react-fast-marquee";
 
-import icon1 from "../assets/images/icons/icon1.png";
-import icon2 from "../assets/images/icons/icon2.png";
-import icon3 from "../assets/images/icons/icon3.png";
-import icon4 from "../assets/images/icons/icon4.png";
-import icon5 from "../assets/images/icons/icon5.png";
-import icon6 from "../assets/images/icons/icon6.png";
-
 const about = () => {
   return (
     <>
+      {/* About Banner */}
       <section className="about-wrapper p-5">
         <div className="container xxl">
           <div className="row">
@@ -26,16 +20,17 @@ const about = () => {
         </div>
       </section>
 
+      {/*Who we are card  */}
       <section className="know-us p-5">
         <div className="container-xxl">
           <div className="row">
-            <div className="d-flex">
-              <div className="col-6">
+            <div className="d-flex aboutt">
+              <div className="col-md-6 col-12 about-image">
                 <img src={img} alt="" className="img-fluid p-3" />
               </div>
-              <div className="col-6 d-flex flex-column text-center justify-content-center p-3">
+              <div className="col-md-6 col-12 about-section  d-flex flex-column text-center justify-content-center p-3">
                 <h1>EnchantiQue</h1>
-                <p>
+                <p className="mb-3">
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                   Neque quod iusto illum cupiditate dolor, provident quibusdam
                   laborum expedita accusantium voluptatem consectetur, officiis
@@ -48,7 +43,7 @@ const about = () => {
                   ratione unde omnis? Amet at commodi blanditiis?
                 </p>
                 <div>
-                  <Link className="btn btn-light" to="/contact">
+                  <Link className="btn btn-primary" to="/contact">
                     Contact Us
                   </Link>
                 </div>
@@ -58,6 +53,7 @@ const about = () => {
         </div>
       </section>
 
+      {/* Download App */}
       <section className="download p-3">
         <div className="container-xxl">
           <div className="row">
@@ -68,7 +64,15 @@ const about = () => {
             </div>
 
             <video
-              className="w-50 mx-auto mb-5"
+              className="mx-auto mb-5 video d-block d-sm-none w-100" // Full width on small devices
+              muted
+              loop
+              autoPlay
+              src={video}
+            ></video>
+
+            <video
+              className="mx-auto mb-5 video d-none d-sm-block w-50" // 50% width on larger devices
               muted
               loop
               autoPlay
@@ -78,6 +82,7 @@ const about = () => {
         </div>
       </section>
 
+      {/* Marquee (animated Hero component that moves across the screen) */}
       <section className="marquee p-5 ">
         <div className="container-xxl">
           <div className="row d-flex align-items-center justify-content-center ">

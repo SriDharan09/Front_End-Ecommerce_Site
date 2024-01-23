@@ -21,40 +21,44 @@ import img4 from "../assets/images/products/img4.png";
 import img5 from "../assets/images/products/img5.png";
 import img6 from "../assets/images/products/img6.png";
 import img7 from "../assets/images/products/img7.png";
-import img8 from "../assets/images/products/img8.png";
+import img8 from "../assets/images/products/img9.png";
+import flipkart from "../assets/images/products/flipkart.png";
+import jogger1 from "../assets/images/jean.png";
+import tshirt from "../assets/images/products/tshirt.png";
+import gown from "../assets/images/products/gownn.png";
 
-// eslint-disable-next-line react-refresh/only-export-components
 export const PRODUCTS = [
   {
     id: 0,
     image: pr1,
-    name: "Slim Fit Dress Shirt",
-    price: 49.9,
+    name: " Printed Spread Collar Casual Shirt",
+    price: 351,
     brand: "Calvin Klein",
   },
   {
     id: 1,
     image: pr2,
-    name: "Men's Dri-FIT T-Shirt",
-    price: 24.9,
+    name: "Men Regular Fit Floral Print Casual Shirt",
+    price: 329,
     brand: "Nike",
     status: "in stock",
     rate: "50% Off",
   },
   {
     id: 2,
-    image: pr3,
-    name: "Women's Badge of Sport Tee",
-    price: 39.9,
-    brand: "Adidas",
+    image: pr6,
+    name: "UniSex Rebel Bold Multi-Color Sport Tee ",
+    price: 999,
+    brand: "H&M",
     status: "in stock",
     rate: "50% Off",
   },
+
   {
     id: 3,
     image: pr4,
-    name: "Men's 1950s Sportswear T-Shirt",
-    price: 49.9,
+    name: "Men slim Fit Printed Casual Shirt",
+    price: 450,
     brand: "Levi s",
     status: "in stock",
     rate: "50% Off",
@@ -68,12 +72,13 @@ export const PRODUCTS = [
     status: "In stock",
     rate: "15% Off",
   },
+
   {
     id: 5,
-    image: pr6,
-    name: "UniSex Rebel Bold Multi-Color Sport Tee ",
-    price: 999,
-    brand: "H&M",
+    image: pr3,
+    name: "Cotton Printed Cut Away Collar Casual Shirt    ",
+    price: 299,
+    brand: "Adidas",
     status: "in stock",
     rate: "50% Off",
   },
@@ -98,67 +103,66 @@ export const PRODUCTS = [
   {
     id: 8,
     image: pro1,
-    name: "Slim Fit Dress Shirt",
-    price: 49.9,
+    name: "Slim Fit Solid Mandarin Collar Casual Shirt",
+    price: 689,
     brand: "Calvin Klein",
   },
   {
     id: 9,
     image: pro2,
-    name: "Men's Dri-FIT T-Shirt",
-    price: 24.9,
+    name: "Checked Solid Spread Collar Formal Shirt",
+    price: 1350,
     brand: "Nike",
   },
   {
     id: 10,
     image: pro3,
-    name: "Women's Badge of Sport Tee",
-    price: 39.9,
+    name: "White Regular fit Formal Shirt",
+    price: 1099,
     brand: "Adidas",
   },
   {
     id: 11,
     image: pro4,
-    name: "Men's 1950s Sportswear T-Shirt",
-    price: 49.9,
+    name: "Printed Half Sleeve Shirt for Men",
+    price: 529,
     brand: "Levi s",
   },
   {
     id: 12,
     image: pro5,
-    name: "Men's Tech 2.0 Short Sleeve T-Shirt",
-    price: 49.9,
+    name: "Denim Cut Away Collar Casual Shirt",
+    price: 1450,
     brand: "Under Armour",
   },
   {
     id: 13,
     image: pro6,
-    name: "Women's Basic Tee, Men's Rebel Bold Tee",
-    price: 9.9,
+    name: "Solid Men White Chino Shorts",
+    price: 780,
     brand: "H&M",
   },
   {
     id: 14,
     image: pro7,
-    name: "Men's Cotton Classic Short Sleeve Crew Neck T-Shirt",
-    price: 39.5,
+    name: "Men Slim Fit Solid Party Shirt",
+    price: 1850,
     brand: "Puma",
   },
   {
     id: 15,
     image: pro8,
-    name: "Women's Classic Fit Crewneck T-Shirt",
-    price: 29.5,
+    name: "Women's Classic Fit Long sleeve Shirt",
+    price: 960,
     brand: "Ralph Lauren",
   },
 ];
 
-// eslint-disable-next-line react-refresh/only-export-components
 export const PRODUCTS1 = [
   {
     id: 16,
     image: img1,
-    name: "Slim Fit Dress Shirt",
+    name: "Men Printed Round Neck Polyester White T-Shirt",
     price: 49.9,
     brand: "Calvin Klein",
     status: "in stock",
@@ -166,8 +170,8 @@ export const PRODUCTS1 = [
   },
   {
     id: 17,
-    image: img2,
-    name: "Men's Dri-FIT T-Shirt",
+    image: flipkart,
+    name: "Graphic Print Round Neck Cotton, Red T-Shirt",
     price: 24.9,
     brand: "Nike",
     status: "in stock",
@@ -184,8 +188,8 @@ export const PRODUCTS1 = [
   },
   {
     id: 19,
-    image: img4,
-    name: "Men's Biker Sportswear Trousers with Ankel Gaurd",
+    image: jogger1,
+    name: "Men Slim Mid Rise Blue Jeans",
     price: 2000,
     brand: "Levi s",
     status: "Coming Soon",
@@ -193,9 +197,9 @@ export const PRODUCTS1 = [
   },
   {
     id: 20,
-    image: img5,
-    name: "Men's Tech 2.0 Short Sleeve T-Shirt",
-    price: 2990,
+    image: tshirt,
+    name: "Typography Round Neck Blend Black T-Shirt",
+    price: 2190,
     brand: "Under Armour",
     status: "Coming Soon",
     rate: "normal rates",
@@ -203,8 +207,8 @@ export const PRODUCTS1 = [
   {
     id: 21,
     image: img6,
-    name: "Black Men's Poly Cotton Hooded Neck Sweatshirt",
-    price: 650,
+    name: "Black Cotton Hooded Neck Sweatshirt",
+    price: 880,
     brand: "H&M",
     status: "Coming Soon",
     rate: "normal rates",
@@ -212,17 +216,17 @@ export const PRODUCTS1 = [
   {
     id: 22,
     image: img7,
-    name: "Men's Cotton Classic Short Sleeve Crew Neck T-Shirt",
-    price: 39.5,
+    name: "Girls Maxi/Full Length Party Black Dress ",
+    price: 3150,
     brand: "Puma",
     status: "out of stock",
     rate: "normal rates",
   },
   {
     id: 23,
-    image: img8,
-    name: "Women's Classic Fit Crewneck T-Shirt",
-    price: 29.5,
+    image: gown,
+    name: "Embroidered Georgette Flared Gown",
+    price: 4199,
     brand: "Ralph Lauren",
     status: "out of stock",
     rate: "normal rates",

@@ -9,26 +9,30 @@ import { FaInstagram, FaLinkedin, FaFacebook, FaGithub } from "react-icons/fa";
 const Footer = () => {
   return (
     <>
+      {/* NEWS LETTER */}
       <section className="container-xxl">
         <div className="row">
           <div className="col-12 d-flex justify-content-between p-5 news-letter ">
-            <div className="col-4 text-center">
-              <h2 className="text-black">Sign up for News Letter</h2>
-              <p className="text-black">
+            <div className="col-4 text-center letter">
+              <h2 className="text-black letter-h">Sign up for News Letter</h2>
+              <p className="text-black letter-p">
                 Get email updates on all our{" "}
-                <span className="text-success h5">special offers</span>
+                <span className="text-success h5 letter-s">special offers</span>
               </p>
             </div>
             <div className="col-8 ">
-              <div className="input-group mb-2 p-4">
+              <div className="input-group mb-2 p-4 letter-input-group">
                 <input
                   type="text"
-                  className="form-control p-2"
-                  placeholder="Mail Id : Eg(xXrQK@example.com)"
-                  aria-label="Mail Id : xXrQK@example.com"
+                  className="form-control letter-input p-2 wider-input"
+                  placeholder="Mail Id :"
+                  aria-label="Mail Id : "
                   aria-describedby="basic-addon2"
                 />
-                <Link className="input-group-text" id="basic-addon2">
+                <Link
+                  className="input-group-text letter-input1 wider-link"
+                  id="basic-addon2"
+                >
                   Sign Up
                 </Link>
               </div>
@@ -38,11 +42,11 @@ const Footer = () => {
         </div>
       </section>
 
-      <footer className="footer p-4 ">
+      <footer className="footer footer-info p-4  ">
         <div className="container-xxl ">
           <div className="row">
             {/*Contact Us */}
-            <div className="col-4 d-flex flex-column ">
+            <div className="col-md-4 col-12 d-flex flex-column ">
               <h3 className="mb-4">Contact Us..</h3>
               <div className="footer-details">
                 <p className="mb-3">
@@ -64,43 +68,66 @@ const Footer = () => {
                   >
                     <FaGithub />
                   </Link>
-                  <Link className="fs-3 " to={"/"}>
+                  <Link
+                    className="fs-3 "
+                    to={
+                      "https://www.facebook.com/sridhar.kannan.3994?mibextid=ZbWKwL"
+                    }
+                  >
                     <FaFacebook />
                   </Link>
-                  <Link className="fs-3 " to={"/"}>
+                  <Link
+                    className="fs-3 "
+                    to={
+                      "https://www.instagram.com/s.r.i_dhar?igsh=b216djVyZ3M5djZu"
+                    }
+                  >
                     <FaInstagram />
                   </Link>
-                  <Link className="fs-3 " to={"/"}>
+                  <Link
+                    className="fs-3 "
+                    to={"https://www.linkedin.com/in/sridhars9/"}
+                  >
                     <FaLinkedin />
                   </Link>
                 </div>
               </div>
             </div>
             {/*About */}
-            <div className="col-2 ">
+            <div className="col-md-2 col-12 ">
               <h3 className="mb-4">About</h3>
               <div className="footer-details d-flex flex-column">
-                <Link className="mb-3 text-black">Delivery</Link>
-                <Link className="mb-3 text-black">About us</Link>
-                <Link className="mb-3 text-black">Customer Support</Link>
-                <Link className="mb-3 text-black">Privacy Policy</Link>
-                <Link className="mb-3 text-black">Terms & Conditions</Link>
+                <Link className="mb-3 text-black footer-links">Delivery</Link>
+                <Link className="mb-3 text-black footer-links">About us</Link>
+                <Link className="mb-3 text-black footer-links">
+                  Customer Support
+                </Link>
+                <Link className="mb-3 text-black footer-links">
+                  Privacy Policy
+                </Link>
+                <Link className="mb-3 text-black footer-links">
+                  Terms & Conditions
+                </Link>
               </div>
             </div>
             {/*Account */}
-            <div className="col-2 ">
+            <div className="col-md-2 col-12 ">
               <h3 className="mb-4">Account</h3>
               <div className="footer-details d-flex flex-column">
-                <Link className="mb-3 text-black">Profile</Link>
-                <Link className="mb-3 text-black">View Cart</Link>
-                <Link className="mb-3 text-black">My Orders</Link>
-                <Link className="mb-3 text-black">My Wishlist</Link>
-                <Link className="mb-3 text-black">Help</Link>
-                <Link className="mb-3 text-black">Offers & Coupons</Link>
+                <Link className="mb-3 text-black footer-links">Profile</Link>
+                <Link className="mb-3 text-black footer-links">View Cart</Link>
+                <Link className="mb-3 text-black footer-links">My Orders</Link>
+                <Link className="mb-3 text-black footer-links">
+                  My Wishlist
+                </Link>
+                <Link className="mb-3 text-black footer-links">Help</Link>
+                <Link className="mb-3 text-black footer-links">
+                  Offers & Coupons
+                </Link>
               </div>
             </div>
             {/*Payment */}
-            <div className="col-4">
+            <div className="col-md-4 col-12">
               <h3 className="mb-3">Install Our App</h3>
               <p>Available on Play Store & App Store</p>
               <div className="pay">
@@ -126,11 +153,14 @@ const Footer = () => {
             </div>
           </div>
           <hr />
+          {/* copyright */}
           <div className="row">
-            <div className="col-9">
-              <p>&copy; {new Date().getFullYear()} All Rights Reserved</p>
+            <div className="col-md-9 col-5">
+              <p className="rights">
+                &copy; {new Date().getFullYear()} All Rights Reserved
+              </p>
             </div>
-            <div className="col-3 d-flex justify-content-end">
+            <div className="col-md-3 col-7 d-flex justify-content-end">
               <Link className="mx-3 text-black">Privacy Policy</Link>
               <Link className=" text-black">Terms & Conditions</Link>
             </div>

@@ -9,29 +9,32 @@ import icon6 from "../assets/images/icons/icon6.png";
 const hero = () => {
   return (
     <>
+      {/* Hero section */}
       <section className="hero p-3">
         <div className="container-xxl">
           <div className="row">
+            {/* Hero Details */}
+            
             <div className="hero-details d-flex text-center  ">
               <div className="card p-2 mx-3 px-3">
-                <img src={icon1} alt="" className="img-fluid" />
-                <p>Fast Orders</p>
+                <img src={icon1} alt="" className="img-fluid feature-img " />
+                <p className="hero-para">Fast Orders</p>
               </div>
               <div className="card p-2 mx-3 px-3">
-                <img src={icon2} alt="" className="img-fluid" />
-                <p>Quick Delivery</p>
+                <img src={icon2} alt="" className="img-fluid hero-img " />
+                <p className="hero-para">Quick Delivery</p>
               </div>
               <div className="card p-2 mx-3 px-3">
-                <img src={icon3} alt="" className="img-fluid" />
-                <p>High Saves</p>
+                <img src={icon3} alt="" className="img-fluid hero-img" />
+                <p className="hero-para">High Saves</p>
               </div>
               <div className="card p-2 mx-3 px-3">
-                <img src={icon4} alt="" className="img-fluid" />
-                <p>24/7 Support</p>
+                <img src={icon4} alt="" className="img-fluid hero-img" />
+                <p className="hero-para">24/7 Support</p>
               </div>
               <div className="card p-2 mx-3 px-3">
-                <img src={icon6} alt="" className="img-fluid" />
-                <p>Certified seller</p>
+                <img src={icon6} alt="" className="img-fluid hero-img" />
+                <p className="hero-para">Certified seller</p>
               </div>
             </div>
           </div>

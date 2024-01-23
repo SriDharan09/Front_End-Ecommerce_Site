@@ -3,35 +3,38 @@ import { Link } from "react-router-dom";
 const contact = () => {
   return (
     <>
+    {/* Contact Banner */}
       <section className="contact-wrapper">
         <div className="container-xxl">
           <div className="row">
             <div className="text-end">
-              <h1 className="text-light ">Reach out to Us..</h1>
+              <h1 className="text-light contact-head ">#Reach out to Us..</h1>
             </div>
           </div>
         </div>
       </section>
 
+        {/* Contact Map and detail */}
       <section className="contact-info p-4 mt-5">
-        <div className="d-flex align-items-center justify-content-center">
-          <div className="col-6">
+        <div className="d-flex align-items-center justify-content-center contact-card">
+          <div className="col-md-6 col-12">
             <map name="">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.7243185568027!2d77.61660717523377!3d12.925431987385707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1457878c2ba1%3A0x745b6338672ed2a3!2sSJR%20Padukone%20Towers%2C%20100%20Feet%20Rd%2C%20Santhosapuram%2C%20Koramangala%202nd%20Block%2C%20Koramangala%2C%20Bengaluru%2C%20Karnataka%20560034!5e0!3m2!1sen!2sin!4v1705912672601!5m2!1sen!2sin"
                 width="600"
                 height="450"
-                allowfullscreen=""
                 loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
+                className="contact-map"
+                allowFullScreen={true}
+                referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
             </map>
           </div>
 
-          <div className=" d-flex align-items-center justify-content-center ">
-            <div className="col-6 w-100 shadow-lg p-5 ">
+          <div className=" d-flex align-items-center justify-content-center contact-details ">
+            <div className="col-md-6 col-12 w-100 shadow  p-5 c">
               <div className="contact-info">
-                <h1 className="text-center">Contact Info</h1>
+                <h1 className="text-center contact-title">Contact Info</h1>
                 <div className="footer-details">
                   <p className="mb-3 h5">
                     <b>Address:</b> Bangalore , Near Nexus Mall.
@@ -49,15 +52,18 @@ const contact = () => {
         </div>
       </section>
 
+      {/* Contact Form (Leave us a message) Bootstrap comp */}
       <section className="contact-form">
         <div className="container-xxl">
           <div className="row">
-            <h1 className="text-center mt-5">Leave us a message</h1>
-            <div className="card mx-auto my-5">
-              <form>
+            <h1 className="text-center mt-5 contact-heading">
+              Leave us a message
+            </h1>
+            <div className="card mx-auto my-5 contact-form">
+              <form className="form-padding">
                 <div className="row mb-3">
                   <div className="col-md-6">
-                    <label for="fname" className="form-label">
+                    <label htmlFor="fname" className="form-label">
                       First Name
                     </label>
                     <input
@@ -70,7 +76,7 @@ const contact = () => {
                     />
                   </div>
                   <div className="col-md-6">
-                    <label for="lname" className="form-label">
+                    <label htmlFor="lname" className="form-label">
                       Last Name
                     </label>
                     <input
@@ -84,7 +90,7 @@ const contact = () => {
                   </div>
                 </div>
                 <div className="mb-3">
-                  <label for="mail" className="form-label">
+                  <label htmlFor="mail" className="form-label">
                     Email
                   </label>
                   <input
@@ -97,7 +103,7 @@ const contact = () => {
                   />
                 </div>
                 <div className="mb-3">
-                  <label for="message" className="form-label">
+                  <label htmlFor="message" className="form-label">
                     Type your message
                   </label>
                   <textarea

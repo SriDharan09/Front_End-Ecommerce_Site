@@ -15,6 +15,7 @@ const cart = () => {
 
   return (
     <>
+      {/* Checks for If the cart have greater than Zero cost then it will display the cart product that added by user  */}
       {checkOutAmount > 0 ? (
         <section className="cart-item ">
           <div className="container-xxl">
@@ -25,15 +26,25 @@ const cart = () => {
                     className=""
                     style={{ marginLeft: "60px", marginTop: "50px" }}
                   >
+                    {/* Table Header that links to cartItem.jsx component */}
                     <thead>
                       <tr>
-                        <th className="col-2">Product Image</th>
-                        <th className="col-4">Product Details</th>
-                        <th className="col-3">Product Edit</th>
-                        <th className="col-2">Coupons</th>
+                        <th className="col-md-2 col-2 cart-product-text">
+                          Product Image
+                        </th>
+                        <th className="col-md-4 col-4 cart-product-text">
+                          Product Details
+                        </th>
+                        <th className="col-md-3 col-4 cart-product-text">
+                          Product Edit
+                        </th>
+                        <th className="col-2 cart-coupon cart-product-text">
+                          Coupons
+                        </th>
                       </tr>
                     </thead>
                   </table>
+                  {/* Mapping cart items Sending data to cartItems.jsx */}
                   {[...PRODUCTS, ...PRODUCTS1].map((product) => {
                     if (cartItems[product.id] !== 0) {
                       return <Cartitems key={product.id} data={product} />;
@@ -42,9 +53,10 @@ const cart = () => {
                 </div>
               </div>
             </div>
+            {/* Clear cart */}
             <hr className="mt-4" />
             <Link
-              className="d-flex justify-content-end h4 text-danger"
+              className="d-flex justify-content-end h4 text-danger cart-clear"
               onClick={(e) => {
                 e.preventDefault();
                 resetCart();
@@ -53,6 +65,7 @@ const cart = () => {
               Clear cart
             </Link>
 
+            {/* Cart Total */}
             <div className="cart-total d-flex justify-content-between p-3 my-5">
               <Link to={"/shop"} className="shoping ">
                 Continue Shopping
@@ -63,12 +76,15 @@ const cart = () => {
                 <p>Total Items: {getTotalCartProducts()}</p>
                 <h4 className="text-success">₹ {checkOutAmount}</h4>
 
-                <Link className="shoping ">Check Out</Link>
+                <Link to={"/checkout"} className="shoping ">
+                  Check Out
+                </Link>
               </div>
             </div>
           </div>
         </section>
       ) : (
+        // If the cart is empty it shows this message
         <div className="p-3 empty">
           <div className="container-xxl">
             <div className="row">
