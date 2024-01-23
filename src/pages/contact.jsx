@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const contact = () => {
   return (
     <>
-    {/* Contact Banner */}
+      {/* Contact Banner */}
       <section className="contact-wrapper">
         <div className="container-xxl">
           <div className="row">
@@ -14,12 +14,13 @@ const contact = () => {
         </div>
       </section>
 
-        {/* Contact Map and detail */}
+      {/* Contact Map and detail */}
       <section className="contact-info p-4 mt-5">
         <div className="d-flex align-items-center justify-content-center contact-card">
           <div className="col-md-6 col-12">
             <map name="">
               <iframe
+                title="Google Maps Location"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.7243185568027!2d77.61660717523377!3d12.925431987385707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1457878c2ba1%3A0x745b6338672ed2a3!2sSJR%20Padukone%20Towers%2C%20100%20Feet%20Rd%2C%20Santhosapuram%2C%20Koramangala%202nd%20Block%2C%20Koramangala%2C%20Bengaluru%2C%20Karnataka%20560034!5e0!3m2!1sen!2sin!4v1705912672601!5m2!1sen!2sin"
                 width="600"
                 height="450"

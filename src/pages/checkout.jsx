@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
 import pay from "../assets/images/pay/pay.png";
 import { ShopContext } from "../components/shopContext";
 

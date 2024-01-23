@@ -9,7 +9,7 @@ const Login = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (password == "") {
+    if (password === "") {
       setError("Please enter correct details!");
     } else {
       setError("Login successful");

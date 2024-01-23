@@ -52,7 +52,7 @@ const Shop = () => {
                       currentPage === 1 ? "disabled" : ""
                     }`}
                   >
-                    <a
+                    <button
                       className="page-link"
                       href="#"
                       tabIndex="-1"
@@ -63,13 +63,13 @@ const Shop = () => {
                       }}
                     >
                       Previous
-                    </a>
+                    </button>
                   </li>
 
                   <li
                     className={`page-item ${currentPage === 1 ? "active" : ""}`}
                   >
-                    <a
+                    <button
                       className="page-link"
                       href="#"
                       onClick={(e) => {
@@ -78,13 +78,13 @@ const Shop = () => {
                       }}
                     >
                       1
-                    </a>
+                    </button>
                   </li>
 
                   <li
                     className={`page-item ${currentPage === 2 ? "active" : ""}`}
                   >
-                    <a
+                    <button
                       className="page-link"
                       href="#"
                       onClick={(e) => {
@@ -93,13 +93,13 @@ const Shop = () => {
                       }}
                     >
                       2
-                    </a>
+                    </button>
                   </li>
 
                   <li
                     className={`page-item ${currentPage === 3 ? "active" : ""}`}
                   >
-                    <a
+                    <button
                       className="page-link"
                       href="#"
                       onClick={(e) => {
@@ -108,7 +108,7 @@ const Shop = () => {
                       }}
                     >
                       3
-                    </a>
+                    </button>
                   </li>
 
                   <li
@@ -116,7 +116,7 @@ const Shop = () => {
                       currentPage === 3 ? "disabled" : ""
                     }`}
                   >
-                    <a
+                    <button
                       className="page-link"
                       href="#"
                       onClick={(e) => {
@@ -125,7 +125,7 @@ const Shop = () => {
                       }}
                     >
                       Next
-                    </a>
+                    </button>
                   </li>
                 </ul>
               </nav>

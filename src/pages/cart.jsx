@@ -7,7 +7,7 @@ const Cart = () => {
   const {
     getTotalCartAmount,
     getTotalCartProducts,
-    addToCart,
+
     resetCart,
     cartItems,
   } = useContext(ShopContext);
