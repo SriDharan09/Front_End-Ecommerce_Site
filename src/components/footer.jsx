@@ -98,8 +98,10 @@ const Footer = () => {
               <h3 className="mb-4">About</h3>
               <div className="footer-details d-flex flex-column">
                 <Link className="mb-3 text-black footer-links">Delivery</Link>
-                <Link className="mb-3 text-black footer-links">About us</Link>
-                <Link className="mb-3 text-black footer-links">
+                <Link to={"/about"} className="mb-3 text-black footer-links">
+                  About us
+                </Link>
+                <Link to={"/contact"} className="mb-3 text-black footer-links">
                   Customer Support
                 </Link>
                 <Link className="mb-3 text-black footer-links">
@@ -115,8 +117,12 @@ const Footer = () => {
               <h3 className="mb-4">Account</h3>
               <div className="footer-details d-flex flex-column">
                 <Link className="mb-3 text-black footer-links">Profile</Link>
-                <Link className="mb-3 text-black footer-links">View Cart</Link>
-                <Link className="mb-3 text-black footer-links">My Orders</Link>
+                <Link to={"/cart"} className="mb-3 text-black footer-links">
+                  View Cart
+                </Link>
+                <Link to={"/login"} className="mb-3 text-black footer-links">
+                  My Orders
+                </Link>
                 <Link className="mb-3 text-black footer-links">
                   My Wishlist
                 </Link>
@@ -131,14 +137,14 @@ const Footer = () => {
               <h3 className="mb-3">Install Our App</h3>
               <p>Available on Play Store & App Store</p>
               <div className="pay">
-                <Link>
+                <Link to={"https://play.google.com/store"}>
                   <img
                     className="img-fluid p-4 "
                     src={PlayStore}
                     alt="Play store Link"
                   />
                 </Link>
-                <Link>
+                <Link to={"https://www.apple.com/in/app-store/"}>
                   <img
                     className="img-fluid p-4 my-1"
                     src={AppStore}
@@ -147,7 +153,10 @@ const Footer = () => {
                 </Link>
               </div>
               <p className="mb-4">Payment Methods</p>
-              <Link className="pay">
+              <Link
+                to={"https://customerportal.mastercard.com/login"}
+                className="pay"
+              >
                 <img className="img-fluid " src={Payment} alt="Payment" />
               </Link>
             </div>

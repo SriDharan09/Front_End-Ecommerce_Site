@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { PRODUCTS } from "./products";
 import { IoIosTimer } from "react-icons/io";
-
-const featuredProducts = () => {
+import { Link } from "react-router-dom";
+import { ShopContext } from "./shopContext";
+const FeaturedProducts = () => {
+  const { viewProductDetails } = useContext(ShopContext);
   return (
     <>
       {/* Featured Products Mapping */}
@@ -12,11 +14,16 @@ const featuredProducts = () => {
             <div className="featured-container">
               {/* Mapping products image */}
               <div key={product.id} className="card">
-                <img
-                  src={product.image}
-                  alt=""
-                  className=" card-img-top img-fluid  m-auto p-3 img"
-                />
+                <Link
+                  to={`/viewProduct`}
+                  onClick={() => viewProductDetails(product.id)}
+                >
+                  <img
+                    src={product.image}
+                    alt=""
+                    className=" card-img-top img-fluid  m-auto p-3 img"
+                  />
+                </Link>
                 {/* Mapping products details */}
                 <div className="card-details">
                   <div className="title mx-3">
@@ -45,4 +52,4 @@ const featuredProducts = () => {
   );
 };
 
-export default featuredProducts;
+export default FeaturedProducts;

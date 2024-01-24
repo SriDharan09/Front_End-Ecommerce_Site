@@ -25,22 +25,44 @@ const about = () => {
         <div className="container-xxl">
           <div className="row">
             <div className="d-flex aboutt">
-              <div className="col-md-6 col-12 about-image">
+              <div className="col-md-6 col-12 about-image ">
                 <img src={img} alt="" className="img-fluid p-3" />
               </div>
               <div className="col-md-6 col-12 about-section  d-flex flex-column text-center justify-content-center p-3">
                 <h1>EnchantiQue</h1>
                 <p className="mb-3">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Neque quod iusto illum cupiditate dolor, provident quibusdam
-                  laborum expedita accusantium voluptatem consectetur, officiis
-                  esse iure. Perferendis repellendus non itaque hic temporibus.
+                  Welcome to Enchantique – where style meets elegance, and every
+                  dress tells a unique story. Founded with a passion for fashion
+                  and a commitment to making every customer feel enchanting, we
+                  are your go-to destination for the most captivating dresses
+                  and timeless ensembles.
                   <br />
                   <br />
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Aspernatur alias molestias laborum adipisci vero, consectetur
-                  incidunt iste distinctio eos harum voluptas quam similique
-                  ratione unde omnis? Amet at commodi blanditiis?
+                  <span className="h5 ">Why EnchantiQue</span>
+                  <li className="mt-3">
+                    Why Enchantique: Quality Assurance: We prioritize quality in
+                    every garment, promising you dresses that are not only
+                    stylish but also crafted to perfection.
+                  </li>{" "}
+                  <li>
+                    Global Trends: Stay ahead in the fashion game with our
+                    curated collection that reflects the latest global trends.
+                  </li>{" "}
+                  <li>
+                    Tailored Experiences: We believe that every customer is
+                    unique. Our goal is to cater to your individual style
+                    preferences and offer a personalized shopping experience.
+                  </li>
+                </p>
+                <hr />
+                <p className="text-muted">
+                  Thank you for being a part of the our family. We invite you to
+                  explore our enchanting world of dresses, where glamour knows
+                  no bounds.
+                </p>
+                <p className=" text-danger mb-3">
+                  Elegantly Yours,
+                  <br /> The Enchantique Team
                 </p>
                 <div>
                   <Link className="btn btn-primary" to="/contact">

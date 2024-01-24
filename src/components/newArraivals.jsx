@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { PRODUCTS1 } from "./products";
+import { Link } from "react-router-dom";
+import { ShopContext } from "./shopContext";
 
-const newArraivals = () => {
+const NewArraivals = () => {
+  const { viewProductDetails } = useContext(ShopContext);
   return (
     <>
       {/* New Arraivals Mapping  */}
@@ -11,11 +14,16 @@ const newArraivals = () => {
             <div className="featured-container">
               <div key={product.id} className="card">
                 {/* Mapping products image */}
-                <img
-                  src={product.image}
-                  alt=""
-                  className=" card-img-top img-fluid  m-auto p-3 img"
-                />
+                <Link
+                  to={`/viewProduct`}
+                  onClick={() => viewProductDetails(product.id)}
+                >
+                  <img
+                    src={product.image}
+                    alt=""
+                    className=" card-img-top img-fluid  m-auto p-3 img"
+                  />
+                </Link>
                 {/* Mapping products details */}
                 <div className="card-details">
                   <div className="title mx-3">
@@ -41,4 +49,4 @@ const newArraivals = () => {
   );
 };
 
-export default newArraivals;
+export default NewArraivals;

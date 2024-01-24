@@ -26,29 +26,22 @@ const customerReview = () => {
                   alt="..."
                 />
                 <div className="carousel-caption  d-md-block text-black">
-                  <h5>Slide 1 label</h5>
-                  <p>
-                    Some representative placeholder content for the first slide.
-                  </p>
+                  <h5>Alex Johnson</h5>
+                  <p>Fast delivery and impressive customer support. </p>
                 </div>
               </div>
               <div className="carousel-item" data-bs-interval="4000">
                 <img src={img2} className="d-block w-100" alt="..." />
                 <div className="carousel-caption  d-md-block text-black">
-                  <h5>Slide 2 label</h5>
-                  <p>
-                    Some representative placeholder content for the second
-                    slide.
-                  </p>
+                  <h5>Emily Brown</h5>
+                  <p>The product exceeded my expectations. Very satisfied.</p>
                 </div>
               </div>
               <div className="carousel-item" data-bs-interval="4000">
                 <img src={img3} className="d-block w-100" alt="..." />
                 <div className="carousel-caption  d-md-block text-black">
-                  <h5>Slide 3 label</h5>
-                  <p>
-                    Some representative placeholder content for the third slide.
-                  </p>
+                  <h5>Mike Davis</h5>
+                  <p>Easy ordering process and fantastic product selection.</p>
                 </div>
               </div>
             </div>

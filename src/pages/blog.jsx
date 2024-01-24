@@ -38,15 +38,17 @@ const blog = () => {
 
                 <div className="card-body col-12 col-sm-9 p-4">
                   <h3 className="card-title">
-                    <b>Marry kelvin</b>
+                    <b>"Fashion Forward: Embracing Timeless Trends"</b>
                   </h3>
+                  <p className="text-muted text-end">
+                    Posted by: Sophia Rodriguez
+                  </p>
 
                   <p className="my-3">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Suscipit molestias, officia maxime commodi a ex accusantium
-                    cupiditate perferendis eaque consequatur reprehenderit nobis
-                    eligendi temporibus. Voluptate nulla dolorum nesciunt dicta
-                    quasi!
+                    Dive into the world of fashion as we explore timeless trends
+                    that continue to make a statement. From classic pieces to
+                    modern twists, discover how to curate a wardrobe that stands
+                    the test of time.
                   </p>
                   <button className="button-deal  blog-btn btn mt-3">
                     Read More
@@ -74,15 +76,16 @@ const blog = () => {
 
                 <div className="card-body col-12 col-sm-9 p-4">
                   <h3 className="card-title">
-                    <b>Marry kelvin</b>
+                    <b>"Sustainable Style: Fashion with a Purpose"</b>
                   </h3>
+                  <p className="text-muted text-end">Posted by: Ethan Carter</p>
 
                   <p className="my-3">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Suscipit molestias, officia maxime commodi a ex accusantium
-                    cupiditate perferendis eaque consequatur reprehenderit nobis
-                    eligendi temporibus. Voluptate nulla dolorum nesciunt dicta
-                    quasi!
+                    Explore the intersection of fashion and sustainability.
+                    Learn about eco-friendly materials, ethical fashion choices,
+                    and how to make environmentally conscious decisions without
+                    compromising on style. Join the movement towards a more
+                    sustainable and stylish future.
                   </p>
                   <button className="button-deal  blog-btn btn mt-3">
                     Read More
@@ -110,15 +113,18 @@ const blog = () => {
 
                 <div className="card-body col-12 col-sm-9 p-4">
                   <h3 className="card-title">
-                    <b>Marry kelvin</b>
+                    <b>"Express Yourself: The Power of Personal Style"</b>
                   </h3>
+                  <p className="text-muted text-end">
+                    Posted by: Olivia Thompson
+                  </p>
 
                   <p className="my-3">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Suscipit molestias, officia maxime commodi a ex accusantium
-                    cupiditate perferendis eaque consequatur reprehenderit nobis
-                    eligendi temporibus. Voluptate nulla dolorum nesciunt dicta
-                    quasi!
+                    Unleash the power of personal style and discover how it goes
+                    beyond clothing. From expressing individuality to boosting
+                    confidence, this blog delves into the psychology of fashion
+                    and how your style choices can make a significant impact on
+                    your daily life.
                   </p>
                   <button className="button-deal  blog-btn btn mt-3">
                     Read More

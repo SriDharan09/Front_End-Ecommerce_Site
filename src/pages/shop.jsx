@@ -20,10 +20,7 @@ const Shop = () => {
             Get Trendy Fashion OutFits
           </span>
           <h5 className="text-white mt-4 shop-banner-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis soluta
-            debitis, et repellendus consequatur eligendi. Dolor totam cum, nulla
-            temporibus, neque provident voluptate, quo accusantium obcaecati
-            dolore at culpa ex!
+            "Revamp Your Style, Embrace Confidence! Stay Trendy, Stay You!"
           </h5>
         </div>
       </section>

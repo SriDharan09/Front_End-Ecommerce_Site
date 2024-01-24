@@ -5,6 +5,7 @@ import ReactStarts from "react-rating-stars-component";
 import { Link } from "react-router-dom";
 
 const ViewDetails = () => {
+  const [coupon, setCoupon] = useState();
   const {
     updateCartItemCount,
     removeToCart,
@@ -13,6 +14,18 @@ const ViewDetails = () => {
     viewProductDetails,
     selectedProduct,
   } = useContext(ShopContext);
+
+  const handleCoupon = (event) => {
+    setCoupon(event.target.value);
+  };
+
+  const handleAddCoupon = () => {
+    if (coupon === "discount") {
+      alert("Coupon Applied");
+    } else {
+      alert("Invalid Coupon");
+    }
+  };
 
   const productId = selectedProduct || 0;
   const product =
@@ -124,10 +137,15 @@ const ViewDetails = () => {
                   type="text"
                   className="form-control coupon"
                   placeholder="Enter Coupon"
+                  onChange={(e) => handleCoupon(e)}
                   aria-label="Enter Coupon"
                   aria-describedby="basic-addon2"
                 />
-                <button className="input-group-text" id="basic-addon2">
+                <button
+                  onClick={handleAddCoupon}
+                  className="input-group-text"
+                  id="basic-addon2"
+                >
                   Add
                 </button>
               </div>
@@ -139,21 +157,21 @@ const ViewDetails = () => {
                   <li>
                     Bank Offer10% off on Bank of Baroda Credit Card and EMI
                     Transactions, up to ₹1500 on orders of ₹5000 and above{" "}
-                    <button href="#">T&C</button>
+                    <Link href="#">T&C</Link>
                   </li>
                   <li>
                     Bank Offer10% off on Canara Bank Credit Card Transactions,
                     up to ₹1,500 on orders of ₹5,000 and above{" "}
-                    <button href="#">T&C</button>
+                    <Link href="#">T&C</Link>
                   </li>
                   <li>
                     Bank Offer10% off on Citi-branded Credit Card EMI
                     Transactions, up to ₹2,000 on orders of ₹10,000 and above{" "}
-                    <button href="#">T&C</button>
+                    <Link href="#">T&C</Link>
                   </li>
                   <li>
                     Special PriceGet extra 20% off (price inclusive of
-                    cashback/coupon) <button href="#">T&C</button>
+                    cashback/coupon) <Link href="#">T&C</Link>
                   </li>
                 </ul>
               </div>
@@ -164,7 +182,7 @@ const ViewDetails = () => {
                   More Prodcuts like this..
                   <div className="row mt-4 view-more">
                     {PRODUCTS.slice(4, 16).map((product) => (
-                      <div className="col-md-3 col-6 p-2">
+                      <div className="col-md-3 col-6 p-2" key={product.id}>
                         <div key={product.id}>
                           <Link
                             to={`/viewProduct`}

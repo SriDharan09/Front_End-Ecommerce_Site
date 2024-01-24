@@ -25,7 +25,9 @@ const home = () => {
 
               <h1 className="banner-heading">Get up to 50% off</h1>
               <h2 className="banner-para">On all products</h2>
-              <Link className="button-link mb-3 ">Shop Now</Link>
+              <Link to={"/shop"} className="button-link mb-3 ">
+                Shop Now
+              </Link>
             </div>
           </div>
         </div>
@@ -54,7 +56,7 @@ const home = () => {
         <div className="container-xxl">
           <div className="row">
             <div className="text-center ad-details d-flex flex-column justify-content-center p-3">
-              <span className=" ad-info text-white ">
+              <span className=" ad-info text-white mb-3 h3 text-success">
                 {" "}
                 Great Indian Sale !!
               </span>
@@ -107,7 +109,9 @@ const home = () => {
                         our outfit
                       </p>
                       <button className="button-deal btn mt-3">
-                        Learn More
+                        <a href="/shop" className="text-black">
+                          Learn More
+                        </a>
                       </button>
                     </div>
                   </div>
@@ -133,7 +137,9 @@ const home = () => {
                         Explore Now.
                       </p>
                       <button className="button-deal btn mt-3">
-                        Learn More
+                        <a href="/shop" className="text-black">
+                          Learn More
+                        </a>
                       </button>
                     </div>
                   </div>

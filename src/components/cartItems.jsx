@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useState } from "react";
 import { ShopContext } from "./shopContext";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
@@ -8,6 +8,7 @@ import { PRODUCTS, PRODUCTS1 } from "../components/products";
 const CartItems = (props) => {
   // Import Data
   const { id, name, image, price, brand } = props.data;
+  const [coupon, setCoupon] = useState();
   const {
     viewProductDetails,
     addToCart,
@@ -17,10 +18,21 @@ const CartItems = (props) => {
     updateCartItemCount,
   } = useContext(ShopContext);
 
+  const handleCoupon = (event) => {
+    setCoupon(event.target.value);
+  };
+
+  const handleAddCoupon = () => {
+    if (coupon === "discount") {
+      alert("Coupon Applied");
+    } else {
+      alert("Invalid Coupon");
+    }
+  }; //
   // Filtering the Selected product when we click the add to cart button
 
   const productId = selectedProduct || 0;
-  const _product =
+  const product =
     PRODUCTS.find((item) => item.id === productId) ||
     PRODUCTS1.find((item) => item.id === productId);
 
@@ -98,9 +110,15 @@ const CartItems = (props) => {
                         className="form-control"
                         placeholder="Enter Coupon"
                         aria-label="Enter Coupon"
+                        onChange={(e) => handleCoupon(e)}
+                        value={coupon}
                         aria-describedby="basic-addon2"
                       />
-                      <span className="input-group-text" id="basic-addon2">
+                      <span
+                        onClick={() => handleAddCoupon()}
+                        className="input-group-text"
+                        id="basic-addon2"
+                      >
                         Add
                       </span>
                     </div>

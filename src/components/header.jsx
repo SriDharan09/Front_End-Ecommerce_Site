@@ -19,7 +19,7 @@ const Header = () => {
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
-
+  const mail = "sridharselvaraj02@gmail";
   return (
     <>
       <header className="navbar-top p-2 ">
@@ -34,12 +34,12 @@ const Header = () => {
                 <a href="tel:+">Call us at 6345678920</a>
               </div>
               <div className="col-md">
-                <Link className="links fs-4 mx-3">
+                <a href={`mailto:${mail}`} className="links fs-4 mx-3">
                   <CiMail />
-                </Link>
-                <Link className="links fs-4">
+                </a>
+                <a href="tel:+63825678920" className="links fs-4">
                   <BiPhoneCall />
-                </Link>
+                </a>
               </div>
             </div>
             {/* Desktop top bar View */}
