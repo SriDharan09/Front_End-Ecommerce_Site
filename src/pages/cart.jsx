@@ -13,11 +13,14 @@ const Cart = () => {
   } = useContext(ShopContext);
 
   const [totalAmount, setTotalAmount] = useState(getTotalCartAmount());
-
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
-    setTotalAmount(getTotalCartAmount(appliedCoupon));
-  }, [cartItems, appliedCoupon]);
+    const calculateTotalAmount = () => {
+      return getTotalCartAmount(appliedCoupon);
+    };
 
+    setTotalAmount(calculateTotalAmount());
+  }, [cartItems, appliedCoupon, getTotalCartAmount]);
   // const checkOutAmount = getTotalCartAmount();
 
   return (
