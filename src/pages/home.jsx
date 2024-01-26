@@ -17,10 +17,10 @@ const home = () => {
           <div className="row">
             <div className="banner-details p-5 d-flex align-items-start justify-content-center flex-column">
               <span className="shadow-lg p-3 text-black d-none d-md-inline">
-                Trade in offer!
+                Apply "Discount50" Coupon Code to
               </span>
-              <span className="shadow p-2 text-black d-md-none">
-                Trade in offer!
+              <span className="shadow p-2 text-black coupon-small d-md-none">
+                Apply "Discount50" Coupon Code to
               </span>
 
               <h1 className="banner-heading">Get up to 50% off</h1>
@@ -62,11 +62,13 @@ const home = () => {
               </span>
               <h5 className="ad-heading text-white mt-4 mt-sm-0">
                 Great Indian Festival Sale {new Date().getFullYear()} is back
-                with it's Exciting Diwali Offers and Discounts on Wide Range of
+                with it's Exciting Offers and Discounts on Wide Range of
                 Products and Accessories
               </h5>
               <div className="mt-3">
-                <button className="btn ad-btn">Shop Now</button>
+                <Link to={"/shop"} className="btn deal-btn ad-btn text-white ">
+                  Shop Now
+                </Link>
               </div>
             </div>
           </div>

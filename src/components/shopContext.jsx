@@ -1,5 +1,6 @@
 import React, { createContext, useState } from "react";
 import { PRODUCTS, PRODUCTS1 } from "../components/products";
+// import CartItems from "./cartItems";
 
 // All Functionality of adding , removing , incrementing , ....
 // decrementing product from cart , view product details, update cart item count, ...
@@ -20,14 +21,20 @@ const getDefaultCart = () => {
 
 const Shopcontext = (props) => {
   const [cartItems, setCartItems] = useState(getDefaultCart());
-  const getTotalCartAmount = () => {
+  const getTotalCartAmount = (coupon) => {
     let totalAmount = 0;
     for (const item in cartItems) {
       if (cartItems[item] > 0) {
         let itemInfo =
           PRODUCTS.find((product) => product.id === Number(item)) ||
           PRODUCTS1.find((product) => product.id === Number(item));
-        totalAmount += cartItems[item] * itemInfo.price;
+        console.log(coupon);
+        if (coupon && coupon === true) {
+          totalAmount += cartItems[item] * (itemInfo.price / 2);
+        } else {
+          totalAmount += cartItems[item] * itemInfo.price;
+        }
+        // totalAmount += cartItems[item] * itemInfo.price;
       }
     }
     return totalAmount.toFixed(2);
@@ -51,10 +58,12 @@ const Shopcontext = (props) => {
   };
 
   const removeToCart = (productId) => {
-    setCartItems((prev) => ({
-      ...prev,
-      [productId]: prev[productId] - 1,
-    }));
+    if (cartItems[productId] > 0) {
+      setCartItems((prev) => ({
+        ...prev,
+        [productId]: prev[productId] - 1,
+      }));
+    }
   };
 
   const updateCartItemCount = (newAmount, productId) => {
@@ -85,11 +94,29 @@ const Shopcontext = (props) => {
     setSelectedProduct(null);
   };
   // const ratingStar = () => {
-  //   Math.floor(Math.random() * 5) + 2;
+  //   return Math.floor(Math.random() * 5) + 2;
   // };
+  const [appliedCoupon, setAppliedCoupon] = useState(false);
+  const resetCoupon = () => {
+    setAppliedCoupon(false);
+    // other logic...
+  };
+
+  const applyCoupon = () => {
+    setAppliedCoupon(true);
+  };
+
+  const cartCouponPrice = (price) => {
+    return price;
+  };
 
   const contextValue = {
     cartItems,
+    // ratingStar,
+    applyCoupon,
+    resetCoupon,
+    appliedCoupon,
+    cartCouponPrice,
     addToCart,
     removeToCart,
     updateCartItemCount,

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { PRODUCTS, PRODUCTS1 } from "../components/products";
 import Cartitems from "../components/cartItems";
 import { ShopContext } from "../components/shopContext";
@@ -7,16 +7,23 @@ const Cart = () => {
   const {
     getTotalCartAmount,
     getTotalCartProducts,
-
+    appliedCoupon,
     resetCart,
     cartItems,
   } = useContext(ShopContext);
-  const checkOutAmount = getTotalCartAmount();
+
+  const [totalAmount, setTotalAmount] = useState(getTotalCartAmount());
+
+  useEffect(() => {
+    setTotalAmount(getTotalCartAmount(appliedCoupon));
+  }, [cartItems, appliedCoupon]);
+
+  // const checkOutAmount = getTotalCartAmount();
 
   return (
     <>
       {/* Checks for If the cart have greater than Zero cost then it will display the cart product that added by user  */}
-      {checkOutAmount > 0 ? (
+      {getTotalCartAmount() > 0 ? (
         <section className="cart-item ">
           <div className="container-xxl">
             <div className="row">
@@ -76,7 +83,12 @@ const Cart = () => {
               <div>
                 <h4>Grand Total:</h4>
                 <p>Total Items: {getTotalCartProducts()}</p>
-                <h4 className="text-success">₹ {checkOutAmount}</h4>
+                <h4 className="text-success">
+                  ₹ {totalAmount}{" "}
+                  {appliedCoupon ? (
+                    <sup className="text-danger">Off 50%</sup>
+                  ) : null}
+                </h4>
 
                 <Link to={"/checkout"} className="shoping ">
                   Check Out

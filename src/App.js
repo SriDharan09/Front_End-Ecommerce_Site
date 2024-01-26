@@ -48,13 +48,13 @@ function App() {
               <Route path="/blog" element={<Blog />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/cart" element={<Cart />} />
               <Route path="/login" element={<Login />} />
               <Route path="/checkout" element={<Checkout />} />
               {/* <Route path="/wishlist" element={<Wishlist />} /> */}
               <Route path="/signup" element={<Signup />} />
               <Route path="/forgotpasword" element={<Forgotpasword />} />
               <Route path="*" element={<Home />} />
+              <Route path="/cart" element={<Cart />} />
               <Route path="/viewProduct" element={<ViewProduct />} />
             </Route>
           </Routes>

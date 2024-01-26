@@ -3,15 +3,19 @@ import pay from "../assets/images/pay/pay.png";
 import { ShopContext } from "../components/shopContext";
 
 const Checkout = () => {
-  const { getTotalCartProducts, getTotalCartAmount, resetCart } =
+  const { getTotalCartProducts, getTotalCartAmount, resetCart, appliedCoupon } =
     useContext(ShopContext);
   const totalAmount = getTotalCartAmount();
   const totalProducts = getTotalCartProducts();
 
   const handlePay = () => {
-    window.alert(
-      `Thank you for your purchase of ${totalProducts} products for a total of ₹${totalAmount}. Your request has been received and is being processed.`
-    );
+    totalAmount > 0
+      ? window.alert(
+          `Thank you for your purchase of ${totalProducts} products for a total of ₹${
+            appliedCoupon ? totalAmount / 2 : totalAmount
+          }. Your request has been received and is being processed.`
+        )
+      : window.alert("Your cart is empty");
     resetCart();
   };
 
@@ -35,7 +39,7 @@ const Checkout = () => {
                     >
                       <div className="d-flex align-items-center justify-content-between">
                         <div className="col-6">
-                          <span>Paypal</span>
+                          <span>Gpay</span>
                         </div>
                         <div className="col-6">
                           <img src={pay} alt="" className="img-fluid" />
@@ -53,7 +57,7 @@ const Checkout = () => {
                       <input
                         type="text"
                         className="form-control"
-                        placeholder="Paypal email"
+                        placeholder="Gpay UPI ID"
                         required
                       />
                     </div>
@@ -70,7 +74,7 @@ const Checkout = () => {
                     >
                       <div className="d-flex align-items-center justify-content-between">
                         <div className="col-6">
-                          <span>Credit card</span>
+                          <span>Debit card</span>
                         </div>
                         <div className="icons col-6">
                           <img src={pay} alt="" className="img-fluid" />

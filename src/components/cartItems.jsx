@@ -15,17 +15,35 @@ const CartItems = (props) => {
     cartItems,
     removeToCart,
     selectedProduct,
+    appliedCoupon,
+    applyCoupon,
+    getTotalCartAmount,
+    cartCouponPrice,
+
     updateCartItemCount,
   } = useContext(ShopContext);
 
   const handleCoupon = (event) => {
     setCoupon(event.target.value);
   };
+  const [discountPrice, setDiscountPrice] = useState(price);
 
   const handleAddCoupon = () => {
-    if (coupon === "discount") {
+    if (appliedCoupon) {
+      alert("Coupon Already Applied");
+      return;
+    }
+
+    if (coupon.trim().toLowerCase() === "discount50") {
+      // console.log(coupon);
       alert("Coupon Applied");
+      const newOfferPrice = price / 2;
+      setDiscountPrice(newOfferPrice);
+
+      applyCoupon();
+      getTotalCartAmount(coupon);
     } else {
+      // console.log(coupon);
       alert("Invalid Coupon");
     }
   }; //
@@ -72,7 +90,14 @@ const CartItems = (props) => {
                     </p>
                     <p className="card-details">
                       <span className="cart-text">Product Price : </span> ₹
-                      <span className="clr cart-text">{price}</span>
+                      <span className="clr cart-text">
+                        {cartCouponPrice(
+                          appliedCoupon ? price / 2 : discountPrice
+                        )}
+                        {appliedCoupon ? (
+                          <sub className="text-danger">Off 50%</sub>
+                        ) : null}
+                      </span>
                     </p>
                   </td>
 
@@ -111,7 +136,7 @@ const CartItems = (props) => {
                         placeholder="Enter Coupon"
                         aria-label="Enter Coupon"
                         onChange={(e) => handleCoupon(e)}
-                        value={coupon}
+                        // value={coupon}
                         aria-describedby="basic-addon2"
                       />
                       <span

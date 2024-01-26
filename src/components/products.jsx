@@ -27,6 +27,15 @@ import jogger1 from "../assets/images/jean.png";
 import tshirt from "../assets/images/products/tshirt.png";
 import gown from "../assets/images/products/gownn.png";
 
+const ratingStar = () => {
+  return Math.floor(Math.random() * 5) + 2;
+};
+
+const randomPrice = () => {
+  return Math.floor(Math.random() * 351) + 50;
+};
+
+// console.log(randomPrice());
 export const PRODUCTS = [
   {
     id: 0,
@@ -34,6 +43,8 @@ export const PRODUCTS = [
     name: " Printed Spread Collar Casual Shirt",
     price: 351,
     brand: "Calvin Klein",
+    star: ratingStar(),
+    randomPrice: randomPrice(),
   },
   {
     id: 1,
@@ -43,6 +54,8 @@ export const PRODUCTS = [
     brand: "Nike",
     status: "in stock",
     rate: "50% Off",
+    star: ratingStar(),
+    randomPrice: randomPrice(),
   },
   {
     id: 2,
@@ -52,6 +65,8 @@ export const PRODUCTS = [
     brand: "H&M",
     status: "in stock",
     rate: "50% Off",
+    star: ratingStar(),
+    randomPrice: randomPrice(),
   },
 
   {
@@ -62,6 +77,8 @@ export const PRODUCTS = [
     brand: "Levi s",
     status: "in stock",
     rate: "50% Off",
+    star: ratingStar(),
+    randomPrice: randomPrice(),
   },
   {
     id: 4,
@@ -70,7 +87,9 @@ export const PRODUCTS = [
     price: 499.9,
     brand: "Under Armour",
     status: "In stock",
-    rate: "15% Off",
+    rate: "50% Off",
+    star: ratingStar(),
+    randomPrice: randomPrice(),
   },
 
   {
@@ -81,6 +100,8 @@ export const PRODUCTS = [
     brand: "Adidas",
     status: "in stock",
     rate: "50% Off",
+    star: ratingStar(),
+    randomPrice: randomPrice(),
   },
   {
     id: 6,
@@ -89,7 +110,9 @@ export const PRODUCTS = [
     price: 750,
     brand: "Puma",
     status: "In stock",
-    rate: "20% Off",
+    rate: "50% Off",
+    star: ratingStar(),
+    randomPrice: randomPrice(),
   },
   {
     id: 7,
@@ -99,13 +122,18 @@ export const PRODUCTS = [
     status: "In stock",
     brand: "Ralph Lauren",
     rate: "50% Off",
+    star: ratingStar(),
+    randomPrice: randomPrice(),
   },
+
   {
     id: 8,
     image: pro1,
     name: "Slim Fit Solid Mandarin Collar Casual Shirt",
     price: 689,
     brand: "Calvin Klein",
+    star: ratingStar(),
+    randomPrice: randomPrice(),
   },
   {
     id: 9,
@@ -113,6 +141,8 @@ export const PRODUCTS = [
     name: "Checked Solid Spread Collar Formal Shirt",
     price: 1350,
     brand: "Nike",
+    star: ratingStar(),
+    randomPrice: randomPrice(),
   },
   {
     id: 10,
@@ -120,6 +150,8 @@ export const PRODUCTS = [
     name: "White Regular fit Formal Shirt",
     price: 1099,
     brand: "Adidas",
+    star: ratingStar(),
+    randomPrice: randomPrice(),
   },
   {
     id: 11,
@@ -127,6 +159,8 @@ export const PRODUCTS = [
     name: "Printed Half Sleeve Shirt for Men",
     price: 529,
     brand: "Levi s",
+    star: ratingStar(),
+    randomPrice: randomPrice(),
   },
   {
     id: 12,
@@ -134,6 +168,8 @@ export const PRODUCTS = [
     name: "Denim Cut Away Collar Casual Shirt",
     price: 1450,
     brand: "Under Armour",
+    star: ratingStar(),
+    randomPrice: randomPrice(),
   },
   {
     id: 13,
@@ -141,13 +177,18 @@ export const PRODUCTS = [
     name: "Solid Men White Chino Shorts",
     price: 780,
     brand: "H&M",
+    star: ratingStar(),
+    randomPrice: randomPrice(),
   },
+
   {
     id: 14,
     image: pro7,
     name: "Men Slim Fit Solid Party Shirt",
     price: 1850,
     brand: "Puma",
+    star: ratingStar(),
+    randomPrice: randomPrice(),
   },
   {
     id: 15,
@@ -155,6 +196,8 @@ export const PRODUCTS = [
     name: "Women's Classic Fit Long sleeve Shirt",
     price: 960,
     brand: "Ralph Lauren",
+    star: ratingStar(),
+    randomPrice: randomPrice(),
   },
 ];
 
@@ -167,6 +210,8 @@ export const PRODUCTS1 = [
     brand: "Calvin Klein",
     status: "in stock",
     rate: "60% off",
+    star: ratingStar(),
+    randomPrice: randomPrice(),
   },
   {
     id: 17,
@@ -176,6 +221,8 @@ export const PRODUCTS1 = [
     brand: "Nike",
     status: "in stock",
     rate: "60% off",
+    star: ratingStar(),
+    randomPrice: randomPrice(),
   },
   {
     id: 18,
@@ -185,6 +232,8 @@ export const PRODUCTS1 = [
     brand: "Adidas",
     status: "in stock",
     rate: "20% off",
+    star: ratingStar(),
+    randomPrice: randomPrice(),
   },
   {
     id: 19,
@@ -194,6 +243,8 @@ export const PRODUCTS1 = [
     brand: "Levi s",
     status: "Coming Soon",
     rate: "",
+    star: ratingStar(),
+    randomPrice: randomPrice(),
   },
   {
     id: 20,
@@ -203,6 +254,8 @@ export const PRODUCTS1 = [
     brand: "Under Armour",
     status: "Coming Soon",
     rate: "normal rates",
+    star: ratingStar(),
+    randomPrice: randomPrice(),
   },
   {
     id: 21,
@@ -212,6 +265,8 @@ export const PRODUCTS1 = [
     brand: "H&M",
     status: "Coming Soon",
     rate: "normal rates",
+    star: ratingStar(),
+    randomPrice: randomPrice(),
   },
   {
     id: 22,
@@ -221,6 +276,8 @@ export const PRODUCTS1 = [
     brand: "Puma",
     status: "out of stock",
     rate: "normal rates",
+    star: ratingStar(),
+    randomPrice: randomPrice(),
   },
   {
     id: 23,
@@ -230,5 +287,7 @@ export const PRODUCTS1 = [
     brand: "Ralph Lauren",
     status: "out of stock",
     rate: "normal rates",
+    star: ratingStar(),
+    randomPrice: randomPrice(),
   },
 ];

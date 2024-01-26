@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 const ViewDetails = () => {
   const [coupon, setCoupon] = useState();
+
   const {
     updateCartItemCount,
     removeToCart,
@@ -13,33 +14,66 @@ const ViewDetails = () => {
     cartItems,
     viewProductDetails,
     selectedProduct,
+    appliedCoupon,
+    applyCoupon,
+    cartCouponPrice,
   } = useContext(ShopContext);
-
-  const handleCoupon = (event) => {
-    setCoupon(event.target.value);
-  };
-
-  const handleAddCoupon = () => {
-    if (coupon === "discount") {
-      alert("Coupon Applied");
-    } else {
-      alert("Invalid Coupon");
-    }
-  };
 
   const productId = selectedProduct || 0;
   const product =
     PRODUCTS.find((item) => item.id === productId) ||
     PRODUCTS1.find((item) => item.id === productId);
 
-  const randomPrice = Math.floor(Math.random() * 70) + 750;
   const [selectedSize, setSelectedSize] = useState(null);
-  const random = Math.floor(Math.random() * 5) + 3;
+
+  const sizePrices = {
+    S: product.price - 40,
+    M: product.price - 32,
+    L: product.price - 15,
+    XL: product.price,
+  };
+
   const cartItemCount = cartItems[productId];
+  const originalPrice = product.price;
+
+  // coupon starts
+  const handleCoupon = (event) => {
+    setCoupon(event.target.value);
+  };
+  const [discountPrice, setDiscountPrice] = useState(originalPrice);
+  // const [appliedCoupon, setAppliedCoupon] = useState(false);
+
+  const handleAddCoupon = () => {
+    if (appliedCoupon) {
+      alert("Coupon Already Applied");
+      return;
+    }
+
+    if (coupon.trim().toLowerCase() === "discount50") {
+      alert("Coupon Applied");
+      const newOfferPrice = offerPrice / 2;
+      cartCouponPrice(500);
+      setDiscountPrice(newOfferPrice);
+      applyCoupon();
+
+      // product.price = newOfferPrice;
+    } else {
+      alert("Invalid Coupon");
+    }
+  };
+
+  const offerPrice = selectedSize ? sizePrices[selectedSize] : originalPrice;
+  // coupon Ends
 
   const handleSizeClick = (size) => {
-    setSelectedSize(size);
+    setSelectedSize((prevSize) => {
+      const newSize = prevSize === size ? null : size;
+      return newSize;
+    });
+    // product.price = sizePrices[size];
   };
+
+  // product.price = offerPrice;
 
   return (
     <>
@@ -72,15 +106,15 @@ const ViewDetails = () => {
             <div className="card-details">
               <ReactStarts
                 count={5}
-                value={random}
+                value={product.star}
                 size={26}
                 activeColor="#ffd700"
                 isHalf={true}
               />
               <p className="my-3 h3 text-success">
-                ₹ &nbsp;{product.price}{" "}
+                ₹ &nbsp;{appliedCoupon ? discountPrice : offerPrice}{" "}
                 <strike className="text-danger h5">
-                  ₹ {product.price + randomPrice}
+                  ₹ {product.price * 2 + product.randomPrice}
                 </strike>
               </p>
 

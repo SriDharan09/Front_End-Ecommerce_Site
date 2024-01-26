@@ -38,7 +38,7 @@ const FeaturedProducts = () => {
                     </p>
                     <hr />
                     <strike className="text-danger feature-price ">
-                      ₹ {product.price}
+                      ₹ {product.price * 2}
                     </strike>
                     <sup className="text-success rate">{product.rate}</sup>
                   </div>

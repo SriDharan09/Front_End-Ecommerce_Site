@@ -4,12 +4,10 @@ import { Link } from "react-router-dom";
 import ReactStarts from "react-rating-stars-component";
 
 const ShopProducts = (props) => {
-  const { id, name, image, price, brand } = props.data;
-  const random = Math.floor(Math.random() * 5) + 3;
+  const { id, name, image, price, brand, star, randomPrice } = props.data;
+  // const random = Math.floor(Math.random() * 5) + 3;
   const { viewProductDetails, addToCart, cartItems } = useContext(ShopContext);
   const cartItemCount = cartItems[id];
-
-  const randomPrice = Math.floor(Math.random() * 451) + 21;
 
   return (
     <>
@@ -36,7 +34,7 @@ const ShopProducts = (props) => {
                   <ReactStarts
                     classNames="star"
                     count={5}
-                    value={random}
+                    value={star}
                     size={20}
                     activeColor="#ffd700"
                     isHalf={true}

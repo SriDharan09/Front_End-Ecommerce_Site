@@ -596,6 +596,15 @@ thead {
   color: black;
   border: 2px solid #cbd6cf;
 }
+.deal-btn {
+  border-radius: 10px;
+  background: var(--search);
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  width: 10%;
+}
+
 /* Contact page ends*/
 
 /* Media Queries for Tablet  */
@@ -664,6 +673,14 @@ thead {
   /* Home page*/
   .banner-details {
     height: 50vh;
+  }
+  .deal-btn {
+    border-radius: 10px;
+    background: var(--search);
+    color: white;
+    border: none;
+    padding: 5px;
+    width: 30%;
   }
   .banner-heading {
     font-size: 30px;
@@ -1166,6 +1183,9 @@ thead {
     position: relative;
     left: -70px;
     top: 3px;
+  }
+  .coupon-small {
+    color: var(--search) !important;
   }
   .home-icon {
     width: 40px;
