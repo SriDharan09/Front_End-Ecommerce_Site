@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // import { Link } from "react-router-dom";
-const contact = () => {
+const Contact = () => {
   const [formData, setFormData] = useState({
     fname: "",
     lname: "",
@@ -178,4 +178,4 @@ const contact = () => {
   );
 };
 
-export default contact;
+export default Contact;
