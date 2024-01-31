@@ -16,6 +16,11 @@ import { useLocation } from "react-router-dom";
 import React from "react";
 import Signup from "./pages/signUp";
 import Forgotpasword from "./pages/forgotPassword";
+import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
+import TermsAndConditionsPage from "./pages/TermsAndConditionsPage";
+import Help from "./pages/Help";
+import DeliveryPage from "./pages/DeliveryPage";
+import Coupon from "./pages/Coupon";
 
 // scroll to top function when route changes
 function ScrollToTop() {
@@ -55,7 +60,17 @@ function App() {
               <Route path="/forgotpasword" element={<Forgotpasword />} />
               <Route path="*" element={<Home />} />
               <Route path="/cart" element={<Cart />} />
+
               <Route path="/viewProduct" element={<ViewProduct />} />
+
+              <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+              <Route
+                path="/terms-and-conditions"
+                element={<TermsAndConditionsPage />}
+              />
+              <Route path="/help" element={<Help />} />
+              <Route path="/delivery" element={<DeliveryPage />} />
+              <Route path="/coupon" element={<Coupon />} />
             </Route>
           </Routes>
         </BrowserRouter>

@@ -81,7 +81,10 @@ const about = () => {
           <div className="row">
             <div className="d-flex justify-content-center align-items-center">
               <h2 className="text-white mb-4">
-                Download Our <Link>App</Link>
+                Download Our {""}
+                <a href="https://play.google.com/store/games?device=windows&pli=1">
+                  App
+                </a>
               </h2>
             </div>
 

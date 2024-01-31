@@ -200,19 +200,32 @@ const Checkout = () => {
                   <label htmlFor="inputState" className="form-label">
                     State
                   </label>
-                  <select id="inputState" className="form-select">
-                    <option selected>Choose...</option>
-                    <option>...</option>
+                  <select
+                    id="inputState"
+                    className="form-select"
+                    defaultValue="Choose..."
+                  >
+                    <option disabled>Choose...</option>
+                    <option value="TamilNadu">Tamil Nadu</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="AndhraPradesh">Andhra Pradesh</option>
+                    <option value="Delhi">Delhi</option>
                   </select>
                 </div>
                 <div className="col-md-2">
                   <label htmlFor="inputZip" className="form-label">
-                    Zip
+                    PinCode
                   </label>
                   <input type="text" className="form-control" id="inputZip" />
                 </div>
                 <div className="col-12 mt-5">
-                  <button id="button-linker" type="submit" onClick={handlePay}>
+                  <button
+                    id="button-linker"
+                    type="submit"
+                    onClick={handlePay}
+                    className="btn btn-warning"
+                  >
                     Proceed To Pay
                   </button>
                 </div>

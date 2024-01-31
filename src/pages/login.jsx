@@ -69,7 +69,10 @@ const Login = () => {
                     </Link>
                   </div>
                   <div className="d-grid gap-2">
-                    <button type="submit " className="login-btn">
+                    <button
+                      type="submit "
+                      className="login-btn btn btn-warning"
+                    >
                       Login
                     </button>
                   </div>

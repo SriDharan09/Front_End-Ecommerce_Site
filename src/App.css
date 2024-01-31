@@ -15,6 +15,12 @@
   --primary2: #354d61;
 }
 
+.faq-question:hover {
+  color: var(--primary);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -135,12 +141,16 @@ footer {
 
 /* Home Page Starts */
 .banner-details {
-  background: url(./assets/images/back.jpg);
+  background: url(./assets/images/cloth5.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
   height: 70vh;
+}
+.home-banner {
+  background-color: #545454a4;
+  opacity: 1;
 }
 
 .banner-heading {
@@ -515,6 +525,20 @@ thead {
   justify-content: center;
   display: flex;
   flex-direction: column;
+}
+
+.blog-form {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin: 0 auto;
+  border: 2px solid black;
+  padding: 50px;
+}
+.blog-img {
+  width: 400px !important;
+  height: 100%;
 }
 
 .blog-details img {
@@ -1180,6 +1204,19 @@ thead {
     background-color: transparent;
     border: none;
   }
+  .blog-form {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+    border: 2px solid black;
+    padding: 50px;
+  }
+  .blog-img {
+    width: 400px !important;
+    height: 100%;
+  }
 }
 
 /* Media queries for mobile */
@@ -1213,7 +1250,8 @@ thead {
     top: 3px;
   }
   .coupon-small {
-    color: var(--search) !important;
+    margin-top: 10px;
+    color: white !important;
   }
   .home-icon {
     width: 40px;
@@ -1253,12 +1291,12 @@ thead {
     height: 50vh;
   }
   .banner-heading {
-    font-size: 30px;
+    font-size: 26px;
     margin-bottom: 0;
   }
   .banner-para {
-    font-size: 20px;
-    color: var(--primary) !important;
+    font-size: 18px;
+    color: black !important;
   }
   .button-link {
     padding: 6px 5px;
@@ -1650,7 +1688,7 @@ thead {
   }
 
   .contact-map {
-    width: 380px;
+    width: 365px;
     height: 300px;
     margin-bottom: 20px;
   }
@@ -1721,5 +1759,27 @@ thead {
     background: #2c2a30;
 
     color: var(--primary);
+  }
+  .card-d {
+    padding: 0 !important;
+  }
+  .blog-details {
+    padding: 1.5rem !important;
+  }
+  .blog-details .card-title {
+    font-size: 18px;
+  }
+  .blog-form {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    border: 2px solid black;
+    padding: 50px;
+  }
+  .blog-img {
+    width: 400px !important;
+    height: 100%;
   }
 }

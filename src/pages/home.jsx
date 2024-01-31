@@ -13,23 +13,21 @@ const home = () => {
     <>
       {/* Home-Banner */}
       <section className="banner">
-        <div className="container">
-          <div className="row">
-            <div className="banner-details p-5 d-flex align-items-start justify-content-center flex-column">
-              <span className="shadow-lg p-3 text-black d-none d-md-inline">
-                Apply "Discount50" Coupon Code to
-              </span>
-              <span className="shadow p-2 text-black coupon-small d-md-none">
-                Apply "Discount50" Coupon Code to
-              </span>
+        <div className="banner-details p-5  d-flex align-items-start justify-content-center flex-column">
+          <span className="shadow-lg p-3 home-banner text-white d-none d-md-inline">
+            <span className="home-banner-discount">
+              Apply "Discount50" Coupon Code to
+            </span>
+          </span>
+          <span className="shadow p-2 home-banner text-black coupon-small d-md-none">
+            Apply "Discount50" Coupon Code to
+          </span>
 
-              <h1 className="banner-heading">Get up to 50% off</h1>
-              <h2 className="banner-para">On all products</h2>
-              <Link to={"/shop"} className="button-link mb-3 ">
-                Shop Now
-              </Link>
-            </div>
-          </div>
+          <h1 className="banner-heading">Get up to 50% off</h1>
+          <h2 className="banner-para">On all products</h2>
+          <Link to={"/shop"} className="button-link mb-3 ">
+            Shop Now
+          </Link>
         </div>
       </section>
 

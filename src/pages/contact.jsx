@@ -17,13 +17,19 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Perform any necessary form validation here
-    // For simplicity, let's assume the form is always valid
+    if (
+      !formData.fname ||
+      !formData.lname ||
+      !formData.mail ||
+      !formData.message
+    ) {
+      alert("Please fill all the fields");
+    } else {
+      setSuccessMessage(
+        `Message sent successfully. You will reach out to you soon, ${formData.fname}! `
+      );
+    }
 
-    // Display success message with the user's first name
-    setSuccessMessage(`Message sent successfully, ${formData.fname}!`);
-
-    // Clear the form fields
     setFormData({
       fname: "",
       lname: "",

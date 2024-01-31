@@ -78,7 +78,7 @@ const Signup = () => {
                       required
                     />
                   </div>
-                  {error && <div className="alert alert-danger">{error}</div>}
+                  {error && <div className="alert alert-success">{error}</div>}
                   <div className="d-flex justify-content-between align-items-center mb-3">
                     <p>Have an account?</p>
                     <Link to="/login" className="form-link">
@@ -86,7 +86,7 @@ const Signup = () => {
                     </Link>
                   </div>
                   <div className="d-grid gap-2">
-                    <button type="submit" className="login-btn">
+                    <button type="submit" className="login-btn btn btn-warning">
                       Sign Up
                     </button>
                   </div>

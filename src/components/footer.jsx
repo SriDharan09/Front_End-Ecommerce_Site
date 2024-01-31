@@ -14,7 +14,9 @@ const Footer = () => {
     if (email.includes("@")) {
       // Alert with type "mail"
       alert(
-        ` ${email} Thanks for Subscribing. You will be notified when new offers are available. Have a nice day. `
+        `Hi ${
+          email.split("@")[0]
+        } !! Thanks for Subscribing. You will be notified when new offers are available. Have a nice day. `
       );
 
       // Clear the email input
@@ -79,7 +81,7 @@ const Footer = () => {
                   <b>Phone:</b> <a href="tel:+9485132058">+9485132058</a>
                 </p>
                 <p className="mb-5">
-                  <b>Customer Care Hours:</b> From 8 a.m to 9 p.m
+                  <b>Customer Care Hours:</b> 24/7
                 </p>
                 <p className="mb-3">
                   <b>Follow the Developer: </b>
@@ -120,17 +122,25 @@ const Footer = () => {
             <div className="col-md-2 col-12 ">
               <h3 className="mb-4">About</h3>
               <div className="footer-details d-flex flex-column">
-                <Link className="mb-3 text-black footer-links">Delivery</Link>
+                <Link to={"/delivery"} className="mb-3 text-black footer-links">
+                  Delivery
+                </Link>
                 <Link to={"/about"} className="mb-3 text-black footer-links">
                   About us
                 </Link>
                 <Link to={"/contact"} className="mb-3 text-black footer-links">
                   Customer Support
                 </Link>
-                <Link className="mb-3 text-black footer-links">
+                <Link
+                  to={"/privacy-policy"}
+                  className="mb-3 text-black footer-links"
+                >
                   Privacy Policy
                 </Link>
-                <Link className="mb-3 text-black footer-links">
+                <Link
+                  to={"/terms-and-conditions"}
+                  className="mb-3 text-black footer-links"
+                >
                   Terms & Conditions
                 </Link>
               </div>
@@ -139,18 +149,20 @@ const Footer = () => {
             <div className="col-md-2 col-12 ">
               <h3 className="mb-4">Account</h3>
               <div className="footer-details d-flex flex-column">
-                <Link className="mb-3 text-black footer-links">Profile</Link>
+                <Link to={"/login"} className="mb-3 text-black footer-links">
+                  Profile
+                </Link>
                 <Link to={"/cart"} className="mb-3 text-black footer-links">
                   View Cart
                 </Link>
                 <Link to={"/login"} className="mb-3 text-black footer-links">
                   My Orders
                 </Link>
-                <Link className="mb-3 text-black footer-links">
-                  My Wishlist
+
+                <Link to={"/help"} className="mb-3 text-black footer-links">
+                  Help
                 </Link>
-                <Link className="mb-3 text-black footer-links">Help</Link>
-                <Link className="mb-3 text-black footer-links">
+                <Link to={"/coupon"} className="mb-3 text-black footer-links">
                   Offers & Coupons
                 </Link>
               </div>
@@ -193,8 +205,12 @@ const Footer = () => {
               </p>
             </div>
             <div className="col-md-3 col-7 d-flex justify-content-end">
-              <Link className="mx-3 text-black">Privacy Policy</Link>
-              <Link className=" text-black">Terms & Conditions</Link>
+              <Link to={"/privacy-policy"} className="mx-3 text-black">
+                Privacy Policy
+              </Link>
+              <Link to={"/terms-and-conditions"} className=" text-black">
+                Terms & Conditions
+              </Link>
             </div>
           </div>
         </div>
