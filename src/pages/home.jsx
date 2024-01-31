@@ -13,7 +13,7 @@ const home = () => {
     <>
       {/* Home-Banner */}
       <section className="banner">
-        <div className="container-xxl">
+        <div className="container">
           <div className="row">
             <div className="banner-details p-5 d-flex align-items-start justify-content-center flex-column">
               <span className="shadow-lg p-3 text-black d-none d-md-inline">
@@ -77,7 +77,7 @@ const home = () => {
 
       {/* New Arrivals */}
       <section className="new-products p-5">
-        <div className="container-xxl">
+        <div className="container">
           <div className="row">
             <div className="text-center">
               <h1 className="feature-heading">New Arrivals</h1>

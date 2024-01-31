@@ -31,7 +31,7 @@ const Header = () => {
                 <p className="text-black">Free Shipping Over ₹999</p>
               </div>
               <div className="col-md-2">
-                <a href="tel:+">Call us at 6345678920</a>
+                <a href="tel:+6345678920">Call us at 6345678920</a>
               </div>
               <div className="col-md">
                 <a href={`mailto:${mail}`} className="links fs-4 mx-3">
@@ -48,15 +48,15 @@ const Header = () => {
                 <p>Save Upto ₹999</p>
               </div>
               <div className="col-md-2 m-auto">
-                <a href="tel:+">Call us</a>
+                <a href="tel:+6345678920">Call us</a>
               </div>
               <div className="col-md-2 m-auto ">
-                <Link className="links fs-4">
+                <a href={`mailto:${mail}`} className="links fs-4 ">
                   <CiMail />
-                </Link>
-                <Link className="links fs-4 ">
+                </a>
+                <a href="tel:+63825678920" className="links fs-4">
                   <BiPhoneCall />
-                </Link>
+                </a>
               </div>
             </div>
           </div>

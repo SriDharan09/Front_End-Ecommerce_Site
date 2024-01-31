@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import PlayStore from "../assets/images/pay/play.jpg";
 import AppStore from "../assets/images/pay/app.jpg";
@@ -7,6 +7,24 @@ import Payment from "../assets/images/pay/pay.png";
 import { FaInstagram, FaLinkedin, FaFacebook, FaGithub } from "react-icons/fa";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+
+  const handleSignUp = () => {
+    // Check if the email contains '@'
+    if (email.includes("@")) {
+      // Alert with type "mail"
+      alert(
+        ` ${email} Thanks for Subscribing. You will be notified when new offers are available. Have a nice day. `
+      );
+
+      // Clear the email input
+      setEmail("");
+    } else if (email.trim() === "") {
+      alert("Please enter Mail Id");
+    } else {
+      alert("Please enter a valid Mail Id");
+    }
+  };
   return (
     <>
       {/* NEWS LETTER */}
@@ -23,18 +41,23 @@ const Footer = () => {
             <div className="col-8 ">
               <div className="input-group mb-2 p-4 letter-input-group">
                 <input
-                  type="text"
+                  type="email"
+                  required
+                  id="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   className="form-control letter-input p-2 wider-input"
                   placeholder="Mail Id :"
                   aria-label="Mail Id : "
                   aria-describedby="basic-addon2"
                 />
-                <Link
+                <button
                   className="input-group-text letter-input1 wider-link"
                   id="basic-addon2"
+                  onClick={handleSignUp}
                 >
                   Sign Up
-                </Link>
+                </button>
               </div>
             </div>
           </div>

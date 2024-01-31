@@ -12,7 +12,7 @@ const ShopProducts = (props) => {
   return (
     <>
       {/* Shop page (*Parent component is shop items*) */}
-      <div className="row mt-4   shop-responsive col-md-3 col-6 text-center">
+      <div className="row mt-4   shop-responsive col-md-4 col-sm-4 col-lg-3 col-6 text-center">
         <div key={id}>
           <div className="card p-3  my-3 shop-container">
             {/* Mapping products image */}

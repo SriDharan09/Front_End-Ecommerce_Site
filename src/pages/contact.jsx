@@ -1,6 +1,39 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+// import { Link } from "react-router-dom";
 const contact = () => {
+  const [formData, setFormData] = useState({
+    fname: "",
+    lname: "",
+    mail: "",
+    message: "",
+  });
+
+  const [successMessage, setSuccessMessage] = useState("");
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Perform any necessary form validation here
+    // For simplicity, let's assume the form is always valid
+
+    // Display success message with the user's first name
+    setSuccessMessage(`Message sent successfully, ${formData.fname}!`);
+
+    // Clear the form fields
+    setFormData({
+      fname: "",
+      lname: "",
+      mail: "",
+      message: "",
+    });
+    setTimeout(() => {
+      setSuccessMessage("");
+    }, 5000);
+  };
   return (
     <>
       {/* Contact Banner */}
@@ -17,7 +50,7 @@ const contact = () => {
       {/* Contact Map and detail */}
       <section className="contact-info p-4 mt-5">
         <div className="d-flex align-items-center justify-content-center contact-card">
-          <div className="col-md-6 col-12">
+          <div className="col-sm-12 col-md-6 col-12">
             <map name="">
               <iframe
                 title="Google Maps Location"
@@ -74,6 +107,8 @@ const contact = () => {
                       id="fname"
                       name="fname"
                       required
+                      value={formData.fname}
+                      onChange={handleChange}
                     />
                   </div>
                   <div className="col-md-6">
@@ -87,6 +122,8 @@ const contact = () => {
                       id="lname"
                       name="lname"
                       required
+                      value={formData.lname}
+                      onChange={handleChange}
                     />
                   </div>
                 </div>
@@ -101,6 +138,8 @@ const contact = () => {
                     id="mail"
                     name="mail"
                     required
+                    value={formData.mail}
+                    onChange={handleChange}
                   />
                 </div>
                 <div className="mb-3">
@@ -114,15 +153,23 @@ const contact = () => {
                     name="message"
                     rows="4"
                     required
+                    value={formData.message}
+                    onChange={handleChange}
                   ></textarea>
                 </div>
-                <Link
+                <button
                   type="submit"
-                  className="contact-btn d-flex justify-content-center align-items-center mx-auto"
+                  onClick={handleSubmit}
+                  className=" d-flex justify-content-center align-items-center mx-auto btn btn-primary"
                 >
                   Submit
-                </Link>
+                </button>
               </form>
+              {successMessage && (
+                <div className="text-success text-center mt-3">
+                  {successMessage}
+                </div>
+              )}
             </div>
           </div>
         </div>

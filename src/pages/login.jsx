@@ -56,7 +56,7 @@ const Login = () => {
                       required
                     />
                   </div>
-                  {error && <div className="alert alert-danger">{error}</div>}
+                  {error && <div className="alert alert-success">{error}</div>}
                   <div className="mb-3">
                     <Link to="/forgotpasword" className="login-p form-link">
                       Forgot password?
