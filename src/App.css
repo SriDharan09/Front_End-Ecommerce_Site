@@ -531,14 +531,14 @@ thead {
   padding: 10px;
   display: flex;
   flex-direction: column;
-  width: 30%;
+  width: 50%;
   margin: 0 auto;
   border: 2px solid black;
   padding: 50px;
 }
 .blog-img {
-  width: 400px !important;
-  height: 100%;
+  width: 600px !important;
+  height: 80%;
 }
 
 .blog-details img {
@@ -641,6 +641,9 @@ thead {
     padding: 0px;
     overflow-x: hidden;
     overflow-y: scroll;
+  }
+  .blog-form {
+    width: 80%;
   }
 
   .links {
@@ -904,7 +907,7 @@ thead {
     padding: 0px !important;
     margin: 0px !important;
     display: flex;
-    gap: 15px;
+    gap: 10px;
   }
   .shop-container {
     width: 190px;
@@ -1179,8 +1182,17 @@ thead {
 
     color: var(--primary);
   }
+  .blog-btn {
+    font-size: 14px;
+    width: 90px;
+    height: 35px;
+    color: black;
+    background-color: #ff6000;
+    position: relative;
+    left: 250px;
+  }
 }
-@media (max-width: 615px) and (min-width: 431px) {
+@media (max-width: 615px) and (min-width: 429.75px) {
   .logo {
     max-width: 7rem;
     margin-top: 5px;
@@ -1216,6 +1228,15 @@ thead {
   .blog-img {
     width: 400px !important;
     height: 100%;
+  }
+  .blog-btn {
+    font-size: 14px;
+    width: 90px;
+    height: 35px;
+    color: black;
+    background-color: #ff6000;
+    position: relative;
+    left: 50px;
   }
 }
 
@@ -1781,5 +1802,85 @@ thead {
   .blog-img {
     width: 400px !important;
     height: 100%;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .col-6 {
+    width: 100%;
+  }
+  .featured-responsive .mmm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .mmm {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+  }
+  .cart-items .cart-quantity {
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+  }
+  .add-btn {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 361px) {
+  .logo {
+    max-width: 7rem;
+    margin-top: 5px;
+    position: relative;
+    left: -40px;
+    top: -3px;
+  }
+
+  .navbar-toggler {
+    position: relative;
+    left: -40px;
+    top: 3px;
+  }
+  .home-icon {
+    width: 40px;
+    margin-left: 5px;
+    height: 30px;
+    position: relative;
+    top: 10px;
+    left: 30px;
+    display: flex;
+    background-color: transparent;
+    border: none;
+  }
+
+  .blog-btn {
+    font-size: 14px;
+    width: 50px;
+    height: 25px;
+    color: black;
+    background-color: #ff6000;
+    position: relative;
+    left: 90px;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 576px) {
+  .shop-product {
+    display: flex;
+    justify-content: space-between;
+  }
+  .col-6 {
+    width: 50%;
+  }
+}
+@media (max-width: 1200px) {
+  .shop-container .card-text {
+    display: flex;
+    flex-direction: column;
+  }
+  .blog-form {
+    width: 80%;
   }
 }

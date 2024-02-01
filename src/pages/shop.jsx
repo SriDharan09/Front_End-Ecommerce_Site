@@ -27,7 +27,7 @@ const Shop = () => {
 
       {/* Shop Products component that links to Shop items -> shop products */}
       <section className="shop-products p-5 ">
-        <div className="container-xxl">
+        <div className="container">
           <div className="row">
             <ShopItems />
           </div>

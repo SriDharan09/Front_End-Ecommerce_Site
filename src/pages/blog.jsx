@@ -165,9 +165,9 @@ const Blog = ({
 }) => {
   return (
     <div className="blog-post mt-4">
-      <div className="card mb-4 mt-3 blog-details-page">
-        <div className="p-4 card-d  d-flex flex-column flex-sm-row">
-          <div className="col-12 col-sm-3 mb-3 mb-sm-0 text-center">
+      <div className="card mb-4 mt-3 blog-details-page ">
+        <div className="p-4 card-d  d-flex flex-column flex-md-column flex-xl-row flex-lg-column flex-sm-column">
+          <div className="col-12 col-sm-12 col-md-12 mb-3 col-xl-3 mb-sm-0 text-center">
             <img
               src={imageSrc ? imageSrc : placeholder}
               alt=""
@@ -175,7 +175,7 @@ const Blog = ({
             />
           </div>
 
-          <div className="card-body col-12 col-sm-9 p-4 ">
+          <div className="card-body col-12  col-md-12 col-xl-9  col-sm-12 p-4 ">
             <h3 className="card-title">
               <b>{blogHead}</b>
             </h3>
@@ -432,18 +432,18 @@ const BlogPage = () => {
             {/* First Blog Card */}
             {/* <div className="card mb-4 mt-3 blog-details-page"> */}
             <div className="p-4 card-d d-flex flex-column flex-sm-row ">
-              <div className="card-body col-12  col-sm-9 p-4 ">
+              <div className="card-body col-12  col-sm-12 col-md-12 p-4 ">
                 <div className="card mb-4 mt-3 blog-details-page ">
-                  <div className="p-4 card-d d-flex flex-column flex-sm-row">
-                    <div className="col-12 col-sm-3 mb-2 mb-sm-0 text-center">
+                  <div className="p-4 card-d  d-flex flex-column flex-md-column flex-xl-row flex-lg-column flex-sm-column">
+                    <div className="col-12 col-sm-12 col-md-12 mb-3 mb-sm-0 col-xl-3 text-center">
                       <img
                         src={img1}
                         alt=""
-                        className="img-fluid img-rounded-start"
+                        className="img-fluid img-rounded-start blog-img"
                       />
                     </div>
 
-                    <div className="card-body col-12 col-sm-9 p-4">
+                    <div className="card-body col-12 col-xl-9 col-md-12  col-sm-12 p-4">
                       <h3 className="card-title">
                         <b>"Fashion Forward: Embracing Timeless Trends"</b>
                       </h3>

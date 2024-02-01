@@ -10,7 +10,7 @@ const NewArraivals = () => {
       {/* New Arraivals Mapping  */}
       <div className="row mt-4 featured-responsive">
         {PRODUCTS1.slice(2, 6).map((product) => (
-          <div key={product.id} className="col-md-3 col-6 p-2">
+          <div key={product.id} className="col-md-3 col-6 p-2 mmm">
             <div className="featured-container">
               <div key={product.id} className="card">
                 {/* Mapping products image */}

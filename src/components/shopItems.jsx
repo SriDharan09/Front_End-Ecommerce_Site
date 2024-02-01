@@ -6,7 +6,7 @@ const shopItems = () => {
   return (
     <>
       {/* Orgin Shop page Prop drilling to shopProducts */}
-      <div className="row shop-product mx-5">
+      <div className="row shop-product  mx-5">
         {[...PRODUCTS, ...PRODUCTS1].map((product) => (
           <ShopProducts key={product.id} data={product} />
         ))}
