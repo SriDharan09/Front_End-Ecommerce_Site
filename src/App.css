@@ -633,13 +633,19 @@ thead {
 
 /* Media Queries for Tablet  */
 @media (max-width: 767px) {
+  .contact-map {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
+  }
+
   html,
   body {
     width: 100%;
     height: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden;
+    overflow-x: auto;
     overflow-y: scroll;
   }
   .blog-form {
@@ -1193,6 +1199,14 @@ thead {
   }
 }
 @media (max-width: 615px) and (min-width: 429.75px) {
+  .contact-map {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
+  }
+  .video {
+    width: 60% !important;
+  }
   .logo {
     max-width: 7rem;
     margin-top: 5px;
@@ -1242,13 +1256,16 @@ thead {
 
 /* Media queries for mobile */
 @media (max-width: 430px) {
+  .video {
+    width: 90% !important;
+  }
   html,
   body {
     width: 100%;
     height: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden;
+    overflow-x: auto;
     overflow-y: scroll;
   }
 
@@ -1867,6 +1884,12 @@ thead {
 }
 
 @media (max-width: 767px) and (min-width: 576px) {
+  .contact-map {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
+  }
+
   .shop-product {
     display: flex;
     justify-content: space-between;
@@ -1876,8 +1899,25 @@ thead {
   }
 }
 @media (max-width: 1200px) {
+  .contact-map {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
+  }
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: auto;
+    overflow-y: scroll;
+  }
   .shop-container .card-text {
     display: flex;
+    flex-direction: column;
+  }
+  .contact-card {
     flex-direction: column;
   }
   .blog-form {

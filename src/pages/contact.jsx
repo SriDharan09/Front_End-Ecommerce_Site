@@ -56,8 +56,8 @@ const Contact = () => {
       {/* Contact Map and detail */}
       <section className="contact-info p-4 mt-5">
         <div className="d-flex align-items-center justify-content-center contact-card">
-          <div className="col-sm-12 col-md-6 col-12">
-            <map name="">
+          <div className="col-sm-12 col-lg-12 col-xl-6  col-md-12 flex-md-column flex-lg-column col-12 ">
+            <map name="map-container">
               <iframe
                 title="Google Maps Location"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.7243185568027!2d77.61660717523377!3d12.925431987385707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1457878c2ba1%3A0x745b6338672ed2a3!2sSJR%20Padukone%20Towers%2C%20100%20Feet%20Rd%2C%20Santhosapuram%2C%20Koramangala%202nd%20Block%2C%20Koramangala%2C%20Bengaluru%2C%20Karnataka%20560034!5e0!3m2!1sen!2sin!4v1705912672601!5m2!1sen!2sin"
@@ -72,7 +72,7 @@ const Contact = () => {
           </div>
 
           <div className=" d-flex align-items-center justify-content-center contact-details ">
-            <div className="col-md-6 col-12 w-100 shadow  p-5 c">
+            <div className="col-md-12 col-xl-6 flex-md-column flex-lg-column col-12  col-sm-12 col-lg-12   w-100 shadow  p-5 c">
               <div className="contact-info">
                 <h1 className="text-center contact-title">Contact Info</h1>
                 <div className="footer-details">
