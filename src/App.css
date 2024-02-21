@@ -645,7 +645,7 @@ thead {
     height: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-x: auto;
+    overflow-x: hidden;
     overflow-y: scroll;
   }
   .blog-form {
@@ -1265,7 +1265,7 @@ thead {
     height: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-x: auto;
+    overflow-x: hidden;
     overflow-y: scroll;
   }
 
@@ -1910,7 +1910,7 @@ thead {
     height: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-x: auto;
+    overflow-x: hidden;
     overflow-y: scroll;
   }
   .shop-container .card-text {
