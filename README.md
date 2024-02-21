@@ -2,6 +2,10 @@
 
 This is an e-commerce shopping website built using React and Bootstrap, featuring a cart functionality with the ability to add, remove, and update items. Additionally, it includes a custom discount feature based on coupons.
 
+## Live Demo
+
+You can check out the live demo of my website [here](https://enchantique-store.netlify.app/).
+
 ## ⚙️ Features
 
 - Add items to the cart
